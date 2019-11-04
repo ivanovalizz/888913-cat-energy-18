@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Elizaveta Ivanova](https://up.htmlacademy.ru/adaptive/18/user/888913).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Шашева](https://up.htmlacademy.ru/adaptive/18/user/130615).
 
 ---
 
