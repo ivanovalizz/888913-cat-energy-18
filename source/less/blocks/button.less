@@ -1,25 +1,39 @@
+@import "../variables";
+
 .button {
   display: block;
+  padding: 13px 108px 12px 111px;
+  font-family: @main-font;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
   color: #ffffff;
-  text-transform: uppercase;
+  text-transform: @upper;
   text-decoration: none;
-  background-color: #68b738;
+  background-color: @main-green;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
+  }
 }
 
 .button_success {
   color: #444444;
   background-color: #f2f2f2;
-}
 
-.button:hover,
-.button:focus {
-  background-color: #5eaa2f;
-}
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
 
-.button:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #5eaa2f;
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+    background-color: #ebebeb;
+  }
 }

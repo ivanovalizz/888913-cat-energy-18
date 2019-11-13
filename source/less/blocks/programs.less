@@ -1,17 +1,16 @@
+@import "../variables";
+@import "../mixins";
+
 .programs {
-  padding: 20px;
-  padding-bottom: 0;
-  font-family: "Oswald", "Arial", sans-serif;
+  padding: 0 20px 20px 20px;
 }
 
 .programs__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .list-style();
 }
 
 .programs__item {
-  margin-bottom: 20px;
+  margin-top: 20px;
   padding-top: 30px;
   padding-bottom: 20px;
   padding-left: 20px;
@@ -20,29 +19,31 @@
 
 .programs__title {
   margin: 0;
-  padding-bottom: 36px;
   padding-left: 70px;
+  font-family: @main-font;
   font-size: 24px;
   line-height: 37px;
-  color: #111111;
-  text-transform: uppercase;
+  color: @main-black;
+  text-transform: @upper;
 }
 
 .programs__text {
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
+  margin-top: 35px;
+  margin-bottom: 0;
+  .content();
 }
 
 .programs__button {
+  display: block;
+  margin-top: 40px;
+  font-family: @main-font;
   font-size: 16px;
   line-height: 16px;
-  color: #111111;
-  text-transform: uppercase;
+  color: @main-black;
+  text-transform: @upper;
   text-decoration: none;
-}
 
-.programs__button:active {
-  color: rgba(17, 17, 17, 0.3);
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
 }

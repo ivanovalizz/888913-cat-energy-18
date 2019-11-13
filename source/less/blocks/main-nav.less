@@ -1,34 +1,39 @@
+@import "../mixins";
+
 .main-nav {
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
-  text-transform: uppercase;
+  text-transform: @upper;
 }
 
 .main-nav__list {
-  list-style: none;
+  .list-style();
 }
 
 .main-nav__link {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
-  color: #111111;
+  font-family: @main-font;
+  color: @main-black;
   text-decoration: none;
-}
+  .bordered-top();
 
-.main-nav__link:hover,
-.main-nav__link:focus {
-  color: rgba(17, 17, 17, 0.6);
-}
+  &:hover,
+  &:focus {
+    color: rgba(17, 17, 17, 0.6);
+  }
 
-.main-nav__link:active {
-  color: rgba(17, 17, 17, 0.3);
-}
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
 
-.main-nav__item_active .main-nav__link,
-.main-nav__item_active .main-nav__link:hover,
-.main-nav__item_active .main-nav__link:focus,
-.main-nav__item_active .main-nav__link:active {
-  color: #111111;
+  &_active {
+    &:hover,
+    &:focus,
+    &:active {
+      color: @main-black;
+    }
+  }
 }

@@ -1,24 +1,28 @@
+@import "../variables";
+@import "../mixins";
+
 .promo {
-  background: url("../../img/index-background-mobile@1x.jpg") no-repeat 0 0;
+  text-align: center;
+  background: url("../../img/index-background-mobile@1x.jpg") no-repeat 50% 50%;
 }
 
 .promo__title {
+  font-family: @main-font;
   font-size: 36px;
   line-height: 36px;
   color: #ffffff;
 }
 
 .promo__tagline {
+  font-family: @main-font;
   font-size: 14px;
   line-height: 14px;
   color: #ffffff;
-  text-transform: uppercase;
+  text-transform: @upper;
 }
 
 .promo__button {
   padding-top: 14px;
   padding-bottom: 11px;
-  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 18px;
 }
