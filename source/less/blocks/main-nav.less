@@ -1,10 +1,10 @@
 @import "../mixins";
 
 .main-nav {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  text-transform: @upper;
+  .uppercase();
 }
 
 .main-nav__list {
@@ -16,24 +16,24 @@
   padding-top: 24px;
   padding-bottom: 24px;
   font-family: @main-font;
-  color: @main-black;
+  color: @black;
   text-decoration: none;
   .bordered-top();
 
   &:hover,
   &:focus {
-    color: rgba(17, 17, 17, 0.6);
+    color: @main-black-60;
   }
 
   &:active {
-    color: rgba(17, 17, 17, 0.3);
+    color: @main-black-30;
   }
 
   &_active {
     &:hover,
     &:focus,
     &:active {
-      color: @main-black;
+      color: @black;
     }
   }
 }

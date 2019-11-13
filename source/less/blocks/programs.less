@@ -14,7 +14,7 @@
   padding-top: 30px;
   padding-bottom: 20px;
   padding-left: 20px;
-  background-color: #f2f2f2;
+  background-color: @white-dark;
 }
 
 .programs__title {
@@ -23,27 +23,30 @@
   font-family: @main-font;
   font-size: 24px;
   line-height: 37px;
-  color: @main-black;
-  text-transform: @upper;
+  color: @black;
+  .uppercase();
 }
 
 .programs__text {
   margin-top: 35px;
   margin-bottom: 0;
-  .content();
+}
+
+.programs__wrapper {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid @black; /*не могу понять какой там цвет, временно черный*/
 }
 
 .programs__button {
-  display: block;
-  margin-top: 40px;
+  display: inline-block;
   font-family: @main-font;
-  font-size: 16px;
   line-height: 16px;
-  color: @main-black;
-  text-transform: @upper;
+  color: @black;
   text-decoration: none;
+  .uppercase();
 
   &:active {
-    color: rgba(17, 17, 17, 0.3);
+    color: @main-black-30;
   }
 }

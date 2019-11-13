@@ -1,39 +1,40 @@
 @import "../variables";
+@import "../mixins";
 
 .button {
   display: block;
-  padding: 13px 108px 12px 111px;
+  padding: 13px 20px;
   font-family: @main-font;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  color: #ffffff;
-  text-transform: @upper;
+  color: @white;
   text-decoration: none;
-  background-color: @main-green;
+  background-color: @green;
+  .uppercase();
 
   &:hover,
   &:focus {
-    background-color: #5eaa2f;
+    background-color: @green-dark;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #5eaa2f;
-  }
-}
-
-.button_success {
-  color: #444444;
-  background-color: #f2f2f2;
-
-  &:hover,
-  &:focus {
-    background-color: #ebebeb;
+    color: @main-white-30;
+    background-color: @green-dark;
   }
 
-  &:active {
-    color: rgba(68, 68, 68, 0.3);
-    background-color: #ebebeb;
+  &_success {
+    color: @gray-dark;
+    background-color: @white-dark;
+
+    &:hover,
+    &:focus {
+      background-color: @gray-lighten;
+    }
+
+    &:active {
+      color: @main-gray-30;
+      background-color: @gray-lighten;
+    }
   }
 }

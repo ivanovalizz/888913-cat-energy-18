@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 *,
 *::after,
@@ -11,10 +12,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: @content-font;
-  font-size: 14px;
-  line-height: 18px;
-  color: @main-black;
+  .content();
 }
 
 .visually-hidden {
