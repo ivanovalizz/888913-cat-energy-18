@@ -1,0 +1,38 @@
+@import "../variables";
+@import "../mixins";
+
+.catalog__title {
+  .title();
+}
+
+.catalog__list {
+  .list-style();
+}
+
+.catalog__content {
+  padding: 80px 20px 25px;
+  text-align: center;
+  .bordered-top();
+}
+
+.catalog__tagline {
+  margin: 0;
+  font-family: @main-font;
+  font-size: 16px;
+  line-height: 20px;
+  /*text-align: center;*/
+  color: @black;
+  .uppercase();
+}
+
+.catalog__text {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 16px;
+  /*text-align: center;*/
+  color: @black-lighten;
+}
+
+.catalog__button {
+  margin-top: 20px;
+}

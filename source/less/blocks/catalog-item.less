@@ -1,0 +1,30 @@
+@import "../variables";
+@import "../mixins";
+
+.catalog-item {
+  padding: 25px 20px;
+  .bordered-top();
+}
+
+.catalog-item__title {
+  font-family: @main-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: @black;
+  text-decoration: none;
+  .uppercase();
+}
+
+.catalog-item__features {
+  font-size: 12px;
+  line-height: 16px;
+  color: @black-lighten;
+}
+
+.catalog-item__features_title {
+  text-align: left;
+}
+
+.catalog-item__features_value {
+  text-align: right;
+}

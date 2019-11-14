@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Форма подбора программ</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="page-header">
@@ -13,13 +14,13 @@
     <button class="main-nav__toggle" type="button">Открыть меню</button>
     <ul class="main-nav__list">
       <li class="main-nav__item">
-        <a href="index.html">Главная</a>
+        <a href="index.html" class="main-nav__link">Главная</a>
       </li>
       <li class="main-nav__item">
-        <a href="catalog.html">Каталог продукции</a>
+        <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
       </li>
       <li class="main-nav__item main-nav__item_active">
-        <a>Подбор программы</a>
+        <a class="main-nav__link main-nav__link_active">Подбор программы</a>
       </li>
     </ul>
   </nav>
@@ -43,16 +44,16 @@
       </p>
     </fieldset>
     <fieldset class="form__wrapper target">
-      <p class="form__item">
-        <input type="radio" name="target" class="form__radio radio" id="slim" value="1">
+      <p class="form__item form-control">
+        <input type="radio" name="target" class="form-control_radio" id="slim" value="1">
         <label for="slim" class="form__label">Похудение</label>
       </p>
-      <p class="form__item">
-        <input type="radio" name="target" class="form__radio radio" id="fat" value="2">
+      <p class="form__item form-control">
+        <input type="radio" name="target" class="form-control_radio" id="fat" value="2">
         <label for="fat" class="form__label">Набор массы</label>
       </p>
-      <p class="form__item">
-        <input type="radio" name="target" class="form__radio radio" id="unknown" value="3">
+      <p class="form__item form-control">
+        <input type="radio" name="target" class="form-control_radio" id="unknown" value="3">
         <label for="unknown" class="form__label">Не знаю (нужен ваш совет)</label>
       </p>
     </fieldset>
@@ -75,22 +76,22 @@
     </fieldset>
     <fieldset class="form__wrapper">
       <h2>Дополнительно</h2>
-      <label for="sugar" class="form__label">
-        <input type="checkbox" class="form__comment checkbox" id="sugar">
-        Сахарозаменитель
-      </label>
-      <label for="water" class="form__label">
-        <input type="checkbox" class="form__comment checkbox" id="water">
-        Питьевая вода
-      </label>
-      <label for="milk" class="form__label">
-        <input type="checkbox" class="form__comment checkbox" id="milk">
-        Молоко
-      </label>
-      <label for="vitamins" class="form__label">
-        <input type="checkbox" class="form__comment checkbox" id="vitamins">
-        Витамины
-      </label>
+      <p class="form-control">
+        <input type="checkbox" class="form__comment form-control_checkbox" id="sugar">
+        <label for="sugar" class="form__label">Сахарозаменитель</label>
+      </p>
+      <p class="form-control">
+        <input type="checkbox" class="form__comment form-control_checkbox" id="water">
+        <label for="water" class="form__label">Питьевая вода</label>
+      </p>
+      <p class="form-control">
+        <input type="checkbox" class="form__comment form-control_checkbox" id="milk">
+        <label for="milk" class="form__label">Молоко</label>
+      </p>
+      <p class="form-control">
+        <input type="checkbox" class="form__comment form-control_checkbox" id="vitamins">
+        <label for="vitamins" class="form__label">Витамины</label>
+      </p>
     </fieldset>
     <button type="submit" class="button form__button">Отправить заявку</button>
     <p class="form__help">* — Обязательные поля</p>
