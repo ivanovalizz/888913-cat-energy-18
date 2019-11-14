@@ -1,1 +1,65 @@
-/*comment*/
+@import "../variables";
+@import "../mixins";
+
+.form {
+  padding-top: 20px;
+}
+
+.form__wrapper {
+  border: none;
+  .bordered-top();
+}
+
+.form__wrapper-title {
+  .content-title();
+}
+
+.form__title {
+  margin: 0;
+  padding-left: 22px;
+  .title();
+}
+
+.form__tagline {
+  margin-top: 35px;
+  padding-left: 20px;
+  .content();
+  .uppercase();
+  font-family: @main-font;
+}
+
+.form__label {
+  font-family: @main-font;
+  font-size: 16px;
+  line-height: 18px;
+  color: @black-light;
+
+  &_checkbox {
+    padding-left: 59px;
+  }
+
+  &_radio {
+    padding-left: 40px;
+  }
+}
+
+.form__comment_textarea {
+  padding: 15px 16px;
+  font-family: @main-font;
+  font-size: 16px;
+  line-height: 18px;
+  color: @black-lighten;
+  border: 1px solid @gray-dark;
+  .uppercase();
+}
+
+.form__help {
+  .content();
+  color: @black-lighten;
+  text-align: center;
+}
+
+.form__button {
+  margin: 0 auto;
+  border: none;
+}

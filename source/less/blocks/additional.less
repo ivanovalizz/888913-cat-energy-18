@@ -1,29 +1,31 @@
-/*.additional__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+@import "../variables";
+@import "../mixins";
+
+.additional__title {
+  padding: 30px 19px;
+  .content-title();
+  .bordered-top();
+}
+
+.additional__list {
+  .list-style();
+}
+
+.additional__item {
+  padding: 25px 20px;
+  .bordered-top();
 }
 
 .additional__name {
-  font-size: 16px;
-  line-height: 20px;
-  color: #111111;
-  text-transform: uppercase;
   text-decoration: none;
+  .content-tagline();
+  .uppercase();
 }
 
 .additional__features {
-  font-family: "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 16px;
-  color: #444444;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 14px;
+  color: @black-lighten;
 }
-
-.additional__features_title {
-  text-align: left;
-}
-
-.additional__features_value {
-  text-align: right;
-}
-*/
