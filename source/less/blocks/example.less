@@ -1,5 +1,5 @@
-@import "../variables";
-@import "../mixins";
+@import "../variables.less";
+@import "../mixins.less";
 
 .example {
   padding: 15px 20px 20px;
@@ -27,10 +27,12 @@
 
 .example__tagline {
   .content-tagline();
+  .uppercase();
   font-size: 14px;
   text-align: center;
 }
 
 .example__state {
   .content-tagline();
+  .uppercase();
 }

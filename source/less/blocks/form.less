@@ -1,5 +1,5 @@
-@import "../variables";
-@import "../mixins";
+@import "../variables.less";
+@import "../mixins.less";
 
 .form {
   padding-top: 20px;
@@ -23,9 +23,11 @@
 .form__tagline {
   margin-top: 35px;
   padding-left: 20px;
-  .content();
-  .uppercase();
+  font-size: 14px;
+  line-height: 18px;
   font-family: @main-font;
+  color: @black;
+  .uppercase();
 }
 
 .form__label {
@@ -33,14 +35,7 @@
   font-size: 16px;
   line-height: 18px;
   color: @black-light;
-
-  &_checkbox {
-    padding-left: 59px;
-  }
-
-  &_radio {
-    padding-left: 40px;
-  }
+  .uppercase();
 }
 
 .form__comment_textarea {
@@ -60,6 +55,7 @@
 }
 
 .form__button {
-  margin: 0 auto;
+  margin: 0 20px;
+  width: 100%;
   border: none;
 }
