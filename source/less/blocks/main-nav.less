@@ -1,4 +1,5 @@
-@import "../mixins";
+@import "../variables.less";
+@import "../mixins.less";
 
 .main-nav {
   font-weight: 500;
@@ -18,6 +19,7 @@
   font-family: @main-font;
   color: @black;
   text-decoration: none;
+  text-align: center;
   .bordered-top();
 
   &:hover,
@@ -36,4 +38,16 @@
       color: @black;
     }
   }
+}
+
+.main-nav__toggle {
+  padding: 0;
+  width: 25px;
+  height: 19px;
+  border: none;
+  font-size: 0;
+  color: transparent;
+  background: url("../../img/icon-mobile-menu.svg") no-repeat 0 0;
+  background-color: transparent;
+  background-size: 25px 19px;
 }

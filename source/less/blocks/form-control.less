@@ -1,1 +1,52 @@
-/*comment*/
+@import "../variables.less";
+@import "../mixins.less";
+
+.form-control {
+  margin-top: 28px;
+}
+
+.form-control__label {
+  position: relative;
+  padding-left: 49px;
+}
+
+.form-control__label_checkbox {
+  &::before {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @gray-dark;
+    content: "";
+  }
+}
+
+.form-control__checkbox:checked + .form-control__label_checkbox::before {
+  background: url("../../img/icon-tick.svg") no-repeat 4px 5px;
+  background-size: 22px 17px;
+}
+
+.form-control__label_radio {
+  &::before {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @gray-dark;
+    border-radius: 50%;
+    content: "";
+  }
+}
+
+.form-control__radio:checked + .form-control__label_radio::after {
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  width: 12px;
+  height: 12px;
+  background-color: @green;
+  border-radius: 50%;
+  content: "";
+}

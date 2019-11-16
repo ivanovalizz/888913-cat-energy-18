@@ -1,1 +1,31 @@
-/*comment*/
+@import "../variables.less";
+@import "../mixins.less";
+
+.social {
+  margin: 0;
+  padding-top: 22px;
+  padding-bottom: 21px;
+  .bordered-top();
+}
+
+.social__list {
+  display: flex;
+  .list-style();
+}
+/*
+.social__link path {
+  fill: @gray-darken;
+}
+
+.social__link:hover path {
+  fill: @green;
+}
+
+.social__link:active {
+  opacity: 0.3;
+}
+
+.social__link:active path {
+  fill: @green;
+}
+*/

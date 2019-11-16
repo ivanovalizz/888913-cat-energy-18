@@ -1,5 +1,5 @@
-@import "../variables";
-@import "../mixins";
+@import "../variables.less";
+@import "../mixins.less";
 
 .catalog__title {
   .title();
@@ -15,13 +15,9 @@
   .bordered-top();
 }
 
-.catalog__tagline {
+.catalog__display {
   margin: 0;
-  font-family: @main-font;
-  font-size: 16px;
-  line-height: 20px;
-  /*text-align: center;*/
-  color: @black;
+  .content-tagline();
   .uppercase();
 }
 
@@ -29,10 +25,21 @@
   margin-top: 10px;
   font-size: 12px;
   line-height: 16px;
-  /*text-align: center;*/
   color: @black-lighten;
 }
 
 .catalog__button {
   margin-top: 20px;
+}
+
+.catalog__tagline {
+  /*margin: 0 auto;*/
+  .bordered-top();
+  padding: 210px 80px 80px;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  text-align: center;
+  background: url("../img/icon-gift.svg") no-repeat center 65px, url("../img/gift-photo-mobile@1x.jpg") no-repeat center 20px;
+  background-size: 56px 109px, 280px 289px;
 }

@@ -1,1 +1,61 @@
-/*comment*/
+@import "../variables.less";
+@import "../mixins.less";
+
+.form {
+  padding-top: 20px;
+}
+
+.form__wrapper {
+  border: none;
+  .bordered-top();
+}
+
+.form__wrapper-title {
+  .content-title();
+}
+
+.form__title {
+  margin: 0;
+  padding-left: 22px;
+  .title();
+}
+
+.form__tagline {
+  margin-top: 35px;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: @main-font;
+  color: @black;
+  .uppercase();
+}
+
+.form__label {
+  font-family: @main-font;
+  font-size: 16px;
+  line-height: 18px;
+  color: @black-light;
+  .uppercase();
+}
+
+.form__comment_textarea {
+  padding: 15px 16px;
+  font-family: @main-font;
+  font-size: 16px;
+  line-height: 18px;
+  color: @black-lighten;
+  border: 1px solid @gray-dark;
+  .uppercase();
+}
+
+.form__help {
+  .content();
+  color: @black-lighten;
+  text-align: center;
+}
+
+.form__button {
+  margin: 0 20px;
+  width: 100%;
+  border: none;
+}

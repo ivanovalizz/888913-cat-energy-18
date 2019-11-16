@@ -1,1 +1,38 @@
-/*comment*/
+@import "../variables.less";
+@import "../mixins.less";
+
+.example {
+  padding: 15px 20px 20px;
+  background-color: @gray-light;
+}
+
+.example__title {
+  margin: 0;
+  .title();
+}
+
+.example__list {
+  .list-style();
+}
+
+.example__parameter {
+  font-size: 12px;
+  line-height: 12px;
+  color: @black-lighten;
+}
+
+.example__value {
+  .content-title();
+}
+
+.example__tagline {
+  .content-tagline();
+  .uppercase();
+  font-size: 14px;
+  text-align: center;
+}
+
+.example__state {
+  .content-tagline();
+  .uppercase();
+}

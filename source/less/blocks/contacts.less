@@ -1,1 +1,30 @@
-/*comment*/
+@import "../variables.less";
+@import "../mixins.less";
+
+.contacts {
+  padding-top: 30px;
+  background-color: @gray-light;
+
+  &_index {
+    background-color: @white;
+  }
+}
+
+.contacts__wrapper {
+  padding: 0 25px 28px 19px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__tagline {
+  .content-tagline();
+}
+
+.contacts__address {
+  .content();
+  line-height: 20px;
+}
+
+.contacts__map {
+  border: none;
+}
