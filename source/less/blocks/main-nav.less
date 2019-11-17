@@ -47,7 +47,62 @@
   border: none;
   font-size: 0;
   color: transparent;
-  background: url("../../img/icon-mobile-menu.svg") no-repeat 0 0;
+  background: url("../img/icon-mobile-menu.svg") no-repeat 0 0;
   background-color: transparent;
   background-size: 25px 19px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    display: flex;
+  }
+
+  .main-nav__item {
+    padding-left: 37px;
+  }
+
+  .main-nav__link {
+    padding-bottom: 12px;
+    font-size: 18px;
+    line-height: 25px;
+    border: none;
+
+    &_active {
+      border-bottom: 2px solid @green;
+    }
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    /* Временно */
+    background: @green;
+  }
+
+  .main-nav__link {
+    color: @white;
+
+    &:hover,
+    &:focus {
+      color: @white-60;
+    }
+
+    &:active {
+      color: @white-30;
+    }
+
+    &_active {
+      border-bottom: 2px solid @white;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: @white;
+      }
+    }
+  }
 }
