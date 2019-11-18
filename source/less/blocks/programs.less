@@ -3,12 +3,30 @@
 
 .programs__list {
   .list-style();
+
+  @media @desktop {
+    display: flex;
+  }
 }
 
 .programs__item {
   margin-top: 20px;
   padding: 30px 20px 20px;
   background-color: @gray-light;
+
+  @media @tablet {
+    padding: 80px 280px 60px 52px;
+  }
+
+  @media @desktop {
+    padding: 80px 52px 60px;
+  }
+
+  &:not(:first-child) {
+    @media @desktop {
+      margin-left: 80px;
+    }
+  }
 }
 
 .programs__title {
@@ -20,6 +38,12 @@
   font-weight: 400;
   color: @black;
   .uppercase();
+
+  @media @tablet {
+    padding: 0;
+    font-size: 36px;
+    line-height: 37px;
+  }
 }
 
 .programs__text {
@@ -31,6 +55,10 @@
   margin-top: 20px;
   padding-top: 20px;
   .bordered-top();
+
+  @media @tablet {
+    border: none;
+  }
 }
 
 .programs__button {
@@ -44,40 +72,5 @@
 
   &:active {
     color: @black-30;
-  }
-}
-
-
-@media (min-width: @tablet-width) {
-  .programs {
-    padding: 0 30px;
-  }
-
-  .programs__title {
-    padding: 0;
-    font-size: 36px;
-    line-height: 37px;
-  }
-
-  .programs__item {
-    padding: 80px 280px 60px 52px;
-  }
-
-  .programs__wrapper {
-    border: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .programs__list {
-    display: flex;
-  }
-
-  .programs__item {
-    padding: 80px 52px 60px;
-  }
-
-  .programs__item:not(:first-child) {
-    margin-left: 80px;
   }
 }

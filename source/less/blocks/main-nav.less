@@ -6,10 +6,25 @@
   font-size: 20px;
   line-height: 20px;
   .uppercase();
+
+  @media @desktop {
+    /* Временно */
+    background: @green;
+  }
 }
 
 .main-nav__list {
   .list-style();
+
+  @media @tablet {
+    display: flex;
+  }
+}
+
+.main-nav__item {
+  @media @tablet {
+    padding-left: 37px;
+  }
 }
 
 .main-nav__link {
@@ -22,13 +37,33 @@
   text-align: center;
   .bordered-top();
 
+  @media @tablet {
+    padding-bottom: 12px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    border: none;
+  }
+
+  @media @desktop {
+    color: @white;
+  }
+
   &:hover,
   &:focus {
     color: @black-60;
+
+    @media @desktop {
+      color: @white-60;
+    }
   }
 
   &:active {
     color: @black-30;
+
+    @media @desktop {
+      color: @white-30;
+    }
   }
 
   &_active {
@@ -36,6 +71,18 @@
     &:focus,
     &:active {
       color: @black;
+
+      @media @desktop {
+        color: @white;
+      }
+    }
+
+    @media @tablet {
+      border-bottom: 2px solid @green;
+    }
+
+    @media @desktop {
+      border-bottom: 2px solid @white;
     }
   }
 }
@@ -50,59 +97,8 @@
   background: url("../img/icon-mobile-menu.svg") no-repeat 0 0;
   background-color: transparent;
   background-size: 25px 19px;
-}
 
-@media (min-width: @tablet-width) {
-  .main-nav__list {
-    display: flex;
-  }
-
-  .main-nav__item {
-    padding-left: 37px;
-  }
-
-  .main-nav__link {
-    padding-bottom: 12px;
-    font-size: 18px;
-    line-height: 25px;
-    border: none;
-
-    &_active {
-      border-bottom: 2px solid @green;
-    }
-  }
-
-  .main-nav__toggle {
+  @media @tablet {
     display: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav {
-    /* Временно */
-    background: @green;
-  }
-
-  .main-nav__link {
-    color: @white;
-
-    &:hover,
-    &:focus {
-      color: @white-60;
-    }
-
-    &:active {
-      color: @white-30;
-    }
-
-    &_active {
-      border-bottom: 2px solid @white;
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: @white;
-      }
-    }
   }
 }

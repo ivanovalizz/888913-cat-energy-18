@@ -2,7 +2,13 @@
 @import "../variables.less";
 
 .intro {
-  padding: 12px 20px 47px;
+  padding-top: 12px;
+  padding-bottom: 47px;
+
+  @media @tablet {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
 }
 
 .intro__title {
@@ -14,47 +20,42 @@
   .list-style();
   margin-top: 30px;
   padding-left: 80px;
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 60px;
+  }
 }
 
 .intro__item {
   margin: 0;
   padding: 0;
   .content();
-}
 
-@media (min-width: @tablet-width) {
-  .intro {
-    padding: 50px 30px 0;
-  }
-
-  .intro__list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin-top: 60px;
-  }
-
-  .intro__item {
+  @media @tablet {
     padding: 90px 78px 120px 0;
     width: 324px;
     font-size: 16px;
     line-height: 24px;
-
-    &:nth-child(2n-1) {
-      margin-right: 60px;
-    }
   }
-}
 
-
-@media (min-width: @desktop-width) {
-  .intro__item {
+  @media @desktop {
     padding: 90px 0 50px;
     width: 245px;
     font-size: 16px;
     line-height: 24px;
+  }
 
-    &:not(:nth-child(4n)) {
+  &:nth-child(2n-1) {
+    @media @tablet {
+      margin-right: 60px;
+    }
+  }
+
+  &:nth-child(4n) {
+    @media @desktop {
       margin-right: 60px;
     }
   }

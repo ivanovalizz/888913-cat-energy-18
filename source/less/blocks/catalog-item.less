@@ -32,14 +32,14 @@
   line-height: 16px;
   color: @black-lighten;
   border-collapse: collapse;
-}
 
-.catalog-item__features_title {
-  text-align: left;
-}
+  &_title {
+    text-align: left;
+  }
 
-.catalog-item__features_value {
-  text-align: right;
+  &_value {
+    text-align: right;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -71,17 +71,16 @@
   .catalog-item__features {
     width: 100%;
     font-size: 16px;
-  }
 
-  .catalog-item__features_row {
-    border-bottom: 1px solid @gray-dark;
-  }
+    &_row {
+      border-bottom: 1px solid @gray-dark;
+    }
 
-  .catalog-item__features_value,
-  .catalog-item__features_title {
-    padding: 6px 0;
+    &_value,
+    &_title {
+      padding: 6px 0;
+    }
   }
-
 
   .catalog-item__button {
     margin-top: 33px;
