@@ -20,11 +20,12 @@
 
   @media @desktop {
     padding: 80px 52px 60px;
+    width: 50%;
   }
 
-  &:not(:first-child) {
+  &:nth-child(2n-1) {
     @media @desktop {
-      margin-left: 80px;
+      margin-right: 80px;
     }
   }
 }
