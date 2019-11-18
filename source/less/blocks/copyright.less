@@ -2,12 +2,43 @@
 @import "../mixins.less";
 
 .copyright {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
   .bordered-top();
+
+  @media @tablet {
+    padding: 0;
+    border: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    path {
+      fill: @green;
+    }
+  }
 }
+/*
+  &:active {
+    color: @black-lighten-30;
+
+    path {
+      opacity: 0.3;
+    }
+  }*/
+
 
 .copyright__text {
   font-size: 16px;
   line-height: 16px;
   color: @black-lighten;
+
+  @media @tablet {
+    display: inline-block;
+    margin-right: 20px;
+  }
 }

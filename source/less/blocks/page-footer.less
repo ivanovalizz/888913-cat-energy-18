@@ -2,6 +2,18 @@
 @import "../mixins.less";
 
 .page-footer {
-  /*padding: 20px;*/
   background-color: @gray-light;
+}
+
+.page-footer__container {
+  padding-top: 40px;
+  padding-bottom: 22px;
+
+  @media @tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
