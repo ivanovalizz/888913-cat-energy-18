@@ -25,3 +25,19 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media @tablet {
+    width: @tablet-width;
+    padding: 0 30px;
+  }
+
+  @media @desktop {
+    width: @desktop-width;
+    padding: 0 40px;
+  }
+}

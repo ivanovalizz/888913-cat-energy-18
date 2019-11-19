@@ -1,10 +1,20 @@
 @import "../variables.less";
 @import "../mixins.less";
 
-.catalog-item {
-  padding: 25px 20px;
-  .bordered-top();
+.catalog-item__wrapper {
+  display: flex;
+
+  @media @tablet {
+    display: block;
+  }
 }
+
+/*.catalog-item__image {
+  display: block;
+  width: 140px;
+  height: 144px;
+  background: tomato;
+}*/
 
 .catalog-item__title {
   font-family: @main-font;
@@ -13,18 +23,58 @@
   color: @black;
   text-decoration: none;
   .uppercase();
+
+  @media @tablet {
+    display: block;
+    text-align: center;
+    padding: 0 50px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media @desktop {
+    padding: 0 20px;
+  }
 }
 
 .catalog-item__features {
+  margin-top: 18px;
   font-size: 12px;
   line-height: 16px;
   color: @black-lighten;
+  border-collapse: collapse;
+
+  @media @tablet {
+    width: 100%;
+    margin-top: 22px;
+    font-size: 16px;
+  }
+
+  &_row {
+    @media @tablet {
+      border-bottom: 1px solid @gray-dark;
+    }
+  }
+
+  &_title {
+    text-align: left;
+
+    @media @tablet {
+      padding: 6px 0;
+    }
+  }
+
+  &_value {
+    text-align: right;
+
+    @media @tablet {
+      padding: 6px 0;
+    }
+  }
 }
 
-.catalog-item__features_title {
-  text-align: left;
-}
-
-.catalog-item__features_value {
-  text-align: right;
+.catalog-item__button {
+  @media @tablet {
+    margin-top: 33px;
+  }
 }

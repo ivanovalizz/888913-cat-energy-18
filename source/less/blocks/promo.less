@@ -4,14 +4,22 @@
 .promo {
   text-align: center;
   background: url("../img/index-background-mobile@1x.jpg") no-repeat 50% 50%;
+
+  @media @tablet {
+    text-align: left;
+    /* Временно */
+    background: none;
+  }
 }
 
 .promo__title {
-  font-family: @main-font;
-  font-size: 36px;
+  .title();
   line-height: 36px;
-  font-weight: 400;
   color: @white;
+
+  @media @tablet {
+    .title();
+  }
 }
 
 .promo__tagline {
@@ -19,6 +27,12 @@
   line-height: 14px;
   color: @white;
   .uppercase();
+
+  @media @tablet {
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+  }
 }
 
 .promo__button {
