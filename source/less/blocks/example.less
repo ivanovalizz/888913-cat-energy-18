@@ -2,8 +2,19 @@
 @import "../mixins.less";
 
 .example {
-  padding: 15px 20px 20px;
+  padding: 15px 0 38px;
   background-color: @gray-light;
+
+  @media @tablet {
+    .bordered-top();
+    background: none;
+  }
+
+  @media @desktop {
+    padding: 60px 0 70px;
+    border: none;
+    background: linear-gradient(transparent 30%, @gray-light 30%);
+  }
 }
 
 .example__title {
@@ -11,28 +22,148 @@
   .title();
 }
 
-.example__list {
-  .list-style();
+.example__content {
+  @media @tablet {
+    margin-top: 60px;
+  }
+
+  @media @desktop {
+    margin-top: 140px;
+    /*padding-right: 226px;*/
+    width: 36%;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
-.example__parameter {
-  font-size: 12px;
-  line-height: 12px;
-  color: @black-lighten;
+.example__wrapper {
+  @media @tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media @desktop {
+    display: block;
+  }
+}
+
+.example__list {
+  .list-style();
+  margin-top: 27px;
+  display: flex;
+  justify-content: space-between;
+
+  @media @tablet {
+    margin-top: 55px;
+    width: 50%;
+  }
+
+  @media @desktop {
+    margin-top: 70px;
+    width: 30%;
+  }
+}
+
+.example__item {
+  width: 50%;
+
+  &:nth-child(2n-1) {
+    margin-right: 32px;
+  }
 }
 
 .example__value {
+  padding: 15px 0;
+  display: block;
   .content-title();
+  .uppercase();
+  text-align: center;
+  border: 1px solid @gray-dark;
+  border-radius: 3px;
+
+  @media @tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__parameter {
+  margin: -10px 19px 0;
+  padding: 0 15px;
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  color: @black-lighten;
+  background-color: @gray-light;
+  text-align: center;
+  text-transform: lowercase;
+  z-index: 2;
+
+  &_weight {
+    @media @tablet {
+      margin: 0 24px;
+    }
+  }
+
+  &_time {
+    @media @tablet {
+      margin: 0 10px;
+    }
+  }
+
+  @media @tablet {
+    margin-top: -7px;
+    padding: 0 7px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: @white;
+  }
+
+  @media @desktop {
+    margin-top: -8px;
+    background-color: @gray-light;
+  }
 }
 
 .example__tagline {
   .content-tagline();
-  .uppercase();
+  margin-top: 22px;
   font-size: 14px;
   text-align: center;
+
+  &_text {
+    @media @tablet {
+      display: block;
+      text-align: right;
+    }
+
+    @media @desktop {
+      margin-right: 64px;
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
+  &_price {
+    @media @tablet {
+      display: block;
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    @media @desktop {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
+  @media @desktop {
+    margin-top: 50px;
+    text-align: left;
+  }
 }
 
 .example__state {
   .content-tagline();
-  .uppercase();
 }

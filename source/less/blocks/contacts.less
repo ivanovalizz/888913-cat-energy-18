@@ -8,21 +8,52 @@
   &_index {
     background-color: @white;
   }
+
+  .container {
+    @media @desktop {
+      position: relative;
+    }
+  }
+
+  @media @desktop {
+    padding: 0;
+  }
 }
 
 .contacts__wrapper {
-  padding: 0 25px 28px 19px;
+  /*padding: 0 0 28px 19px;*/
   display: flex;
   justify-content: space-between;
+
+  @media @desktop {
+    position: absolute;
+    top: 95px;
+    left: 40px;
+    padding: 63px 90px 59px 76px;
+    width: 570px;
+    background-color: @white;
+  }
 }
 
 .contacts__tagline {
   .content-tagline();
+  text-transform: none;
+  margin-right: 40px;
+
+  @media @desktop {
+    margin: 0 40px 0 0;
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 .contacts__address {
   .content();
   line-height: 20px;
+
+  @media @desktop {
+    font-size: 16px;
+  }
 }
 
 .contacts__map {
