@@ -2,42 +2,61 @@
 @import "../mixins.less";
 
 .form-control {
-  margin-top: 28px;
+  &:not(:first-child) {
+    margin-top: 28px;
+  }
+
+  &_checkbox {
+    @media @tablet {
+      width: 50%;
+    }
+
+    &:nth-child(2n) {
+      @media @tablet {
+        padding-left: 30px;
+      }
+    }
+  }
 }
 
 .form-control__label {
   position: relative;
   padding-left: 49px;
-}
 
-.form-control__label_checkbox {
-  &::before {
-    position: absolute;
-    top: -4px;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    border: 1px solid @gray-dark;
-    content: "";
+  &_radio {
+    &::before {
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid @gray-dark;
+      border-radius: 50%;
+      content: "";
+    }
+  }
+
+  &_checkbox {
+    &::before {
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid @gray-dark;
+      content: "";
+
+      @media @tablet {
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
 }
 
 .form-control__checkbox:checked + .form-control__label_checkbox::before {
   background: url("../img/icon-tick.svg") no-repeat 4px 5px;
   background-size: 22px 17px;
-}
-
-.form-control__label_radio {
-  &::before {
-    position: absolute;
-    top: -4px;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    border: 1px solid @gray-dark;
-    border-radius: 50%;
-    content: "";
-  }
 }
 
 .form-control__radio:checked + .form-control__label_radio::after {

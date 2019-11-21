@@ -50,8 +50,22 @@
   }
 }
 
+.form-label {
+  font-family: @main-font;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @black-light;
+  .uppercase();
+
+  @media @tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 .bordered-top() {
-  border-top: 1px solid @gray;
+  border-top: 1px solid @gray-dark;
 }
 
 .uppercase() {
