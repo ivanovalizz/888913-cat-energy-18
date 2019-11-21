@@ -4,11 +4,29 @@
 .form-control {
   &:not(:first-child) {
     margin-top: 28px;
+
+    @media @tablet {
+      margin-top: 54px;
+    }
   }
 
   &_checkbox {
+    &:not(:first-child) {
+      margin-top: 28px;
+
+      @media @desktop {
+        margin: 0;
+      }
+    }
+
     @media @tablet {
+      margin-top: 54px;
       width: 50%;
+    }
+
+    @media @desktop {
+      margin: 0;
+      width: 25%;
     }
 
     &:nth-child(2n) {
