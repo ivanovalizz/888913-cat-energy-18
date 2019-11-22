@@ -80,8 +80,10 @@
   }
 
   .form__item {
-    margin: 0;
-    width: 570px;
+    @media @desktop {
+      margin: 0;
+      width: 570px;
+    }
 
     &:not(:first-child) {
       @media @tablet {
