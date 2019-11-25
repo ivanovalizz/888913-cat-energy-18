@@ -2,60 +2,272 @@
 @import "../mixins.less";
 
 .form {
-  padding-top: 20px;
+  padding-bottom: 34px;
+
+  @media @tablet {
+    padding-bottom: 72px;
+  }
 }
 
 .form__wrapper {
-  border: none;
-  .bordered-top();
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+
+  @media @tablet {
+    padding-right: 37px;
+    padding-left: 41px;
+  }
+
+  @media @desktop {
+    padding: 0;
+  }
+
+  &_main-info {
+    margin-top: 39px;
+
+    @media @tablet {
+      margin-top: 65px;
+    }
+
+    @media @desktop {
+      margin: 0;
+      padding: 0;
+      width: 570px;
+    }
+
+    .form__item {
+      &:not(:first-child) {
+        @media @tablet {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  &_target {
+    border: 1px solid @gray-dark-50;
+    margin: 23px -20px 0;
+    padding: 29px 20px 26px;
+
+    @media @tablet {
+      margin: 72px 37px 0 41px;
+      padding: 25px 28px;
+    }
+
+    @media @desktop {
+      margin: 0;
+      padding: 34px 28px;
+      width: 570px;
+    }
+  }
+
+  &_contacts {
+    margin-top: 30px;
+
+    @media @tablet {
+      margin-top: 79px;
+    }
+
+    @media @desktop {
+      margin-top: 70px;
+    }
+
+    .form__item {
+      @media @desktop {
+        margin: 0;
+        width: 570px;
+      }
+
+      &:not(:first-child) {
+        @media @tablet {
+          margin-top: 20px;
+        }
+
+        @media @desktop {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &_comments {
+    margin-top: 30px;
+
+    @media @tablet {
+      margin-top: 69px;
+    }
+  }
+
+  &_additional {
+    margin-top: 30px;
+
+    @media @tablet {
+      margin-top: 69px;
+    }
+  }
+}
+
+.form__main-content {
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 69px;
+  }
+}
+
+.form__wrapper-checkbox {
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 64px 0 0;
+  }
+}
+
+.form__wrapper-contacts {
+  @media @tablet {
+    padding: 70px 0 0;
+  }
+
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .form__wrapper-title {
   .content-title();
+  margin: 0 0 30px;
+
+  @media @tablet {
+    margin: 0;
+  }
+
+  @media @desktop {
+    margin: 0;
+  }
 }
 
 .form__title {
   margin: 0;
-  padding-left: 22px;
+  padding-left: 2px;
   .title();
+
+  @media @tablet {
+    margin-top: 60px;
+  }
+
+  @media @desktop {
+    margin-top: 81px;
+  }
 }
 
 .form__tagline {
   margin-top: 35px;
-  padding-left: 20px;
+  margin-bottom: 0;
   font-size: 14px;
   line-height: 18px;
   font-family: @main-font;
   color: @black;
   .uppercase();
+
+  @media @tablet {
+    margin-top: 53px;
+    padding-right: 340px;
+    padding-left: 41px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media @desktop {
+    padding: 0;
+    max-width: 330px;
+  }
+}
+
+.form__item {
+  margin: 14px 0 0;
+  display: flex;
+  align-items: center;
+
+  @media @desktop {
+    margin-top: 20px;
+  }
+
+  &:first-child {
+    margin-top: 0; /* TODO Только для мобильной, переопределить для таблета и десктопа*/
+  }
 }
 
 .form__label {
-  font-family: @main-font;
-  font-size: 16px;
-  line-height: 18px;
-  color: @black-light;
-  .uppercase();
+  margin-right: 15px;
+  .form-label();
+  white-space: nowrap;
 }
 
-.form__comment_textarea {
-  padding: 15px 16px;
-  font-family: @main-font;
-  font-size: 16px;
-  line-height: 18px;
-  color: @black-lighten;
-  border: 1px solid @gray-dark;
-  .uppercase();
+.form__comment {
+  &_textarea {
+    padding: 15px 16px;
+    width: 100%;
+    height: 150px;
+    .form-label();
+    color: @black-lighten;
+    border: 1px solid @gray-dark-50;
+
+    @media @tablet {
+      margin-top: 70px;
+    }
+  }
+}
+
+.form__manage {
+  @media @tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+    padding-right: 37px;
+    padding-left: 41px;
+  }
+
+  @media @desktop {
+    margin-top: 70px;
+    padding: 0;
+  }
 }
 
 .form__help {
+  margin-top: 23px;
+  margin-bottom: 0;
   .content();
   color: @black-lighten;
   text-align: center;
+
+  @media @tablet {
+    margin-top: 0;
+    width: 283px;
+    text-align: left;
+  }
+
+  @media @desktop {
+    width: 570px;
+  }
 }
 
 .form__button {
-  margin: 0 20px;
+  margin-top: 30px;
+  margin-bottom: 0;
   width: 100%;
-  border: none;
+  border: 0 none;
+
+  @media @tablet {
+    margin-top: 0;
+    width: 283px;
+  }
+
+  @media @desktop {
+
+    width: 570px;
+  }
 }

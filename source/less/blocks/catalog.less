@@ -71,11 +71,6 @@
 .catalog__display {
   margin: 0;
   .content-tagline();
-  .uppercase();
-
-  @media @tablet {
-    font-size: 20px;
-  }
 }
 
 .catalog__text {
@@ -107,4 +102,23 @@
   text-align: center;
   background: url("../img/icon-gift.svg") no-repeat center 65px, url("../img/gift-photo-mobile@1x.jpg") no-repeat center 20px;
   background-size: 56px 109px, 280px 289px;
+
+  @media @tablet {
+    margin-top: 69px;
+    margin-bottom: 0;
+    padding: 75px 125px 69px 424px;
+    text-align: left;
+    background: url("../img/icon-gift.svg") no-repeat 91px center, url("../img/gift-photo-tablet@1x.jpg") no-repeat 0 0;
+    background-size: 56px 61px, contain;
+    border: none;
+  }
+
+  @media @desktop {
+    padding: 190px 43px 43px;
+    margin: 0;
+    width: 245px;
+    text-align: center;
+    background: url("../img/icon-gift.svg") no-repeat 96px 65px, url("../img/gift-photo-desktop@1x.jpg") no-repeat 0 0;
+    background-size: 56px 61px, contain;
+  }
 }

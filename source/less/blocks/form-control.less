@@ -2,41 +2,103 @@
 @import "../mixins.less";
 
 .form-control {
-  margin-top: 28px;
+  margin-top: 0;
+
+  &_radio {
+    &:not(:first-child) {
+      margin-top: 26px;
+
+      @media @tablet {
+        margin-top: 33px;
+      }
+    }
+  }
+
+  &_checkbox {
+    @media @tablet {
+      width: 50%;
+    }
+
+    @media @desktop {
+      width: 25%;
+    }
+
+    &:not(:first-child) {
+      margin-top: 28px;
+
+      @media @tablet {
+        margin: 0;
+      }
+    }
+
+    &:nth-child(2n) {
+      @media @tablet {
+        padding-left: 30px;
+      }
+
+      @media @desktop {
+        padding-left: 0;
+      }
+    }
+
+    &:nth-child(n+3) {
+      @media @tablet {
+        margin-top: 54px;
+      }
+
+      @media @desktop {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .form-control__label {
   position: relative;
   padding-left: 49px;
-}
 
-.form-control__label_checkbox {
-  &::before {
-    position: absolute;
-    top: -4px;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    border: 1px solid @gray-dark;
-    content: "";
+  @media @tablet {
+    padding-left: 59px;
+  }
+
+  &_radio {
+    &::before {
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid @gray-dark;
+      border-radius: 50%;
+      content: "";
+    }
+  }
+
+  &_checkbox {
+    &::before {
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid @gray-dark;
+      content: "";
+
+      @media @tablet {
+        top: -10px;
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
 }
 
 .form-control__checkbox:checked + .form-control__label_checkbox::before {
   background: url("../img/icon-tick.svg") no-repeat 4px 5px;
   background-size: 22px 17px;
-}
 
-.form-control__label_radio {
-  &::before {
-    position: absolute;
-    top: -4px;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    border: 1px solid @gray-dark;
-    border-radius: 50%;
-    content: "";
+  @media @tablet {
+    background-position: 9px 10px;
   }
 }
 
