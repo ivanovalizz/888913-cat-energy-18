@@ -2,36 +2,52 @@
 @import "../mixins.less";
 
 .form-control {
-  &:not(:first-child) {
-    margin-top: 28px;
+  margin-top: 0;
 
-    @media @tablet {
-      margin-top: 54px;
+  &_radio {
+    &:not(:first-child) {
+      margin-top: 26px;
+
+      @media @tablet {
+        margin-top: 33px;
+      }
     }
   }
 
   &_checkbox {
-    &:not(:first-child) {
-      margin-top: 28px;
-
-      @media @desktop {
-        margin: 0;
-      }
-    }
-
     @media @tablet {
-      margin-top: 54px;
       width: 50%;
     }
 
     @media @desktop {
-      margin: 0;
       width: 25%;
+    }
+
+    &:not(:first-child) {
+      margin-top: 28px;
+
+      @media @tablet {
+        margin: 0;
+      }
     }
 
     &:nth-child(2n) {
       @media @tablet {
         padding-left: 30px;
+      }
+
+      @media @desktop {
+        padding-left: 0;
+      }
+    }
+
+    &:nth-child(n+3) {
+      @media @tablet {
+        margin-top: 54px;
+      }
+
+      @media @desktop {
+        margin-top: 0;
       }
     }
   }
@@ -40,6 +56,10 @@
 .form-control__label {
   position: relative;
   padding-left: 49px;
+
+  @media @tablet {
+    padding-left: 59px;
+  }
 
   &_radio {
     &::before {
@@ -65,6 +85,7 @@
       content: "";
 
       @media @tablet {
+        top: -10px;
         width: 40px;
         height: 40px;
       }
@@ -75,6 +96,10 @@
 .form-control__checkbox:checked + .form-control__label_checkbox::before {
   background: url("../img/icon-tick.svg") no-repeat 4px 5px;
   background-size: 22px 17px;
+
+  @media @tablet {
+    background-position: 9px 10px;
+  }
 }
 
 .form-control__radio:checked + .form-control__label_radio::after {
