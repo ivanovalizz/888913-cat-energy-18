@@ -2,8 +2,15 @@
 @import "../mixins.less";
 
 .page-header {
+  position: relative;
+
   @media @tablet {
     display: flex;
     justify-content: space-between;
   }
+}
+
+.page-header__logo {
+  display: block;
+  padding: 11px 0 13px;
 }
