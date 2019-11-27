@@ -7,10 +7,6 @@
   line-height: 20px;
   .uppercase();
 
-  @media @desktop {
-    background: @green; /*TODO убрать заливку и заменить на картинку*/
-  }
-
   &_closed {
     .main-nav__list {
       display: none;
@@ -83,7 +79,12 @@
   .list-style();
 
   @media @tablet {
+    padding-top: 40px;
     display: flex;
+  }
+
+  @media @desktop {
+    padding-top: 70px;
   }
 }
 
@@ -93,12 +94,10 @@
   }
 
   &:last-child {
-    .main-nav__link {
-      border-bottom: 1px solid @gray-dark;
+    border-bottom: 1px solid @gray-dark;
 
-      @media @tablet {
-        border: 0 none;
-      }
+    @media @tablet {
+      border: 0 none;
     }
   }
 }
@@ -114,11 +113,12 @@
   .bordered-top();
 
   @media @tablet {
-    padding-bottom: 12px;
+    padding-top: 0;
+    padding-bottom: 9px;
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
-    border: none;
+    border: 0 none;
   }
 
   @media @desktop {

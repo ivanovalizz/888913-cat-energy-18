@@ -3,12 +3,27 @@
 
 .promo {
   text-align: center;
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat 50% 50%;
+  background: linear-gradient(to bottom, @green 63%, @white 63%);
+  .bordered-top();
+  padding-top: 29px;
 
   @media @tablet {
+    padding-top: 60px;
     text-align: left;
+    border: 0 none;
     /* Временно */
     background: none;
+  }
+
+  @media @desktop {
+    padding-top: 110px;
+    background: linear-gradient(to right, @white 50%, @green 50%);
+  }
+
+  .container {
+    @media @tablet {
+      padding: 0 120px;
+    }
   }
 }
 
@@ -16,8 +31,10 @@
   .title();
   line-height: 36px;
   color: @white;
+  margin: 0;
 
   @media @tablet {
+    max-width: 420px;
     .title();
   }
 }
@@ -27,8 +44,11 @@
   line-height: 14px;
   color: @white;
   .uppercase();
+  margin-top: 19px;
+  margin-bottom: 0;
 
   @media @tablet {
+    margin-top: 33px;
     font-size: 20px;
     line-height: 20px;
     color: @black;
@@ -36,7 +56,17 @@
 }
 
 .promo__button {
+  margin-top: 302px; /*TODO изменить после добавления картинки перед кнопкой*/
   padding-top: 14px;
   padding-bottom: 11px;
   font-size: 14px;
+
+  @media @tablet {
+    margin-top: 48px;
+    width: 245px; /*46.4%*/
+  }
+
+  @media @desktop {
+    margin-top: 53px;
+  }
 }
