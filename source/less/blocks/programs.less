@@ -183,6 +183,7 @@
 .programs__button {
   .content-tagline();
   .uppercase();
+  padding-right: 50px;
   display: inline-block;
   position: relative;
   line-height: 16px;
@@ -196,7 +197,7 @@
     content: "";
     position: absolute;
     top: 8px;
-    right: -30px;
+    right: 20px;
     width: 18px;
     height: 2px;
     background-color: @black-lighten;
@@ -210,7 +211,7 @@
     content: "";
     position: absolute;
     top: 4px;
-    right: -35px;
+    right: 15px;
     width: 0;
     height: 0;
     border: 5px solid transparent;
@@ -225,12 +226,12 @@
   &:hover,
   &:focus {
     &::before {
-      right: -39px;
+      right: 11px;
       width: 27px;
     }
 
     &::after {
-      right: -44px;
+      right: 6px;
     }
   }
 

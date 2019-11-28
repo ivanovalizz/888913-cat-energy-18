@@ -2,14 +2,14 @@
 @import "../mixins.less";
 
 .page-header {
+  position: relative;
+
   @media @desktop {
     background: linear-gradient(to right, @white 50%, @green 50%);
   }
 }
 
 .page-header__container {
-  position: relative;
-
   @media @tablet {
     display: flex;
     justify-content: space-between;
