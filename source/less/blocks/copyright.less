@@ -1,37 +1,6 @@
 @import "../variables.less";
 @import "../mixins.less";
 
-.copyright {
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration: none;
-  .bordered-top();
-
-  @media @tablet {
-    padding: 0;
-    border: none;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    path {
-      fill: @green;
-    }
-  }
-}
-/*
-  &:active {
-    color: @black-lighten-30;
-
-    path {
-      opacity: 0.3;
-    }
-  }*/
-
-
 .copyright__text {
   font-size: 16px;
   line-height: 16px;
@@ -40,5 +9,41 @@
   @media @tablet {
     display: inline-block;
     margin-right: 20px;
+  }
+}
+
+.copyright {
+  .bordered-top();
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+
+  @media @tablet {
+    padding: 0;
+    border: 0 none;
+  }
+
+  svg {
+    fill: @gray-darken;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: @green;
+    }
+  }
+
+  &:active {
+    .copyright__text {
+      color: @black-lighten-30;
+    }
+
+    svg {
+      fill: @green;
+      opacity: 0.3;
+    }
   }
 }

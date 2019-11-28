@@ -150,9 +150,9 @@
 }
 
 .form__title {
+  .title();
   margin: 0;
   padding-left: 2px;
-  .title();
 
   @media @tablet {
     margin-top: 60px;
@@ -164,13 +164,13 @@
 }
 
 .form__tagline {
+  .uppercase();
   margin-top: 35px;
   margin-bottom: 0;
   font-size: 14px;
   line-height: 18px;
   font-family: @main-font;
   color: @black;
-  .uppercase();
 
   @media @tablet {
     margin-top: 53px;
@@ -201,17 +201,17 @@
 }
 
 .form__label {
-  margin-right: 15px;
   .form-label();
+  margin-right: 15px;
   white-space: nowrap;
 }
 
 .form__comment {
   &_textarea {
+    .form-label();
     padding: 15px 16px;
     width: 100%;
     height: 150px;
-    .form-label();
     color: @black-lighten;
     border: 1px solid @gray-dark-50;
 
@@ -238,9 +238,9 @@
 }
 
 .form__help {
+  .content();
   margin-top: 23px;
   margin-bottom: 0;
-  .content();
   color: @black-lighten;
   text-align: center;
 
