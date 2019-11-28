@@ -2,9 +2,9 @@
 @import "../mixins.less";
 
 .promo {
+  .bordered-top();
   text-align: center;
   background: linear-gradient(to bottom, @green 63%, @white 63%);
-  .bordered-top();
   padding-top: 29px;
 
   @media @tablet {
@@ -19,11 +19,11 @@
     padding-top: 110px;
     background: linear-gradient(to right, @white 50%, @green 50%);
   }
+}
 
-  .container {
-    @media @tablet {
-      padding: 0 120px;
-    }
+.promo__container {
+  @media @tablet {
+    padding: 0 120px;
   }
 }
 
@@ -40,10 +40,10 @@
 }
 
 .promo__tagline {
+  .uppercase();
   font-family: @main-font;
   line-height: 14px;
   color: @white;
-  .uppercase();
   margin-top: 19px;
   margin-bottom: 0;
 

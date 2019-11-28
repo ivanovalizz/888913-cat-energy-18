@@ -2,10 +2,19 @@
 @import "../mixins.less";
 
 .main-nav {
+  .uppercase();
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  .uppercase();
+
+  .main-nav__toggle {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: @black-light;
+    }
+  }
 
   &_closed {
     .main-nav__list {
@@ -18,13 +27,13 @@
 
     .main-nav__toggle {
       &::before {
-        content: "";
-        position: absolute;
+        /*content: "";
+        position: absolute;*/
         top: 20px;
         left: 20px;
         width: 25px;
         height: 3px;
-        background-color: @black-light;
+        /*background-color: @black-light;*/
         box-shadow: 0 8px 0 0 @black-light, 0 16px 0 0 @black-light;
       }
 
@@ -49,13 +58,13 @@
     .main-nav__toggle {
       &::before,
       &::after {
-        content: "";
-        position: absolute;
+        /*content: "";
+        position: absolute;*/
         top: 28px;
         right: 22px;
         width: 24px;
         height: 2px;
-        background-color: @black-light;
+        /*background-color: @black-light;*/
       }
 
       &::before {
@@ -66,12 +75,33 @@
         transform: rotate(-45deg);
       }
     }
+
+    .main-nav__list {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
   }
 
   &_nojs {
     .main-nav__toggle {
       display: none;
     }
+
+    .main-nav__list {
+      position: static;
+      display: block;
+
+      @media @tablet {
+        display: flex;
+      }
+    }
+  }
+
+  @media @desktop {
+    max-width: 50%;
   }
 }
 
@@ -81,6 +111,7 @@
   @media @tablet {
     padding-top: 40px;
     display: flex;
+    flex-wrap: wrap;
   }
 
   @media @desktop {
@@ -89,8 +120,11 @@
 }
 
 .main-nav__item {
+  background-color: @white;
+
   @media @tablet {
     padding-left: 37px;
+    background: none;
   }
 
   &:last-child {
@@ -103,6 +137,7 @@
 }
 
 .main-nav__link {
+  .bordered-top();
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -110,7 +145,6 @@
   color: @black;
   text-decoration: none;
   text-align: center;
-  .bordered-top();
 
   @media @tablet {
     padding-top: 0;
