@@ -1,0 +1,118 @@
+@import "../variables.less";
+@import "../mixins.less";
+
+.slider {
+  @media @tablet {
+    background: linear-gradient(to right, @gray-light 50%, @gray 50%) 0 170px no-repeat;
+    height: 700px; // TODO: Избавься как только у слайдера появятся картинки!!!!
+  }
+
+  @media @desktop {
+    width: 650px;
+    background-position: 0 189px;
+  }
+}
+
+.slider__state {
+  .content-tagline();
+  display: inline-block;
+  padding-bottom: 5px;
+  border: 1px solid transparent;
+
+  @media @tablet {
+    border-bottom: 1px dotted @gray;
+  }
+
+  &:hover,
+  &:focus {
+    @media @tablet {
+      border-bottom: 1px solid @black-40;
+    }
+  }
+
+  &:active {
+    @media @tablet {
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
+
+.slider__range {
+  position: relative;
+}
+
+.slider__line {
+  position: absolute;
+  top: 3px;
+  left: 93px;
+  width: 84px;
+  height: 14px;
+  border: 1px solid @gray-dark;
+  background-color: @white;
+  border-radius: 6px;
+
+  @media @tablet {
+    top: 8px;
+    left: 134px;
+    width: 428px;
+    height: 6px;
+    border-radius: 2.5px;
+    border: 0 none;
+    background-color: @white-dark;
+  }
+}
+
+.slider__toggle {
+  position: absolute;
+  top: 7px;
+  left: 98px;
+  width: 35px;
+  height: 6px;
+  background-color: @green;
+  border-radius: 3px;
+
+  @media @tablet {
+    top: -5px;
+    left: 350px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid @gray-dark;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    background-color: @white;
+  }
+
+  &::before {
+    @media @tablet {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: 11px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: @green;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    @media @tablet {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &:active {
+    &::before {
+      @media @tablet {
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    @media @tablet {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      border: 2px solid @green;
+    }
+  }
+}

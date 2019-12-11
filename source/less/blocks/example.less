@@ -147,150 +147,35 @@
   font-size: 14px;
   text-align: center;
 
-  &_text {
-    @media @tablet {
-      /*margin-top: 50px;*/
-      display: block;
-      text-align: right;
-    }
-
-    @media @desktop {
-      margin-right: 64px;
-      display: inline-block;
-      text-align: left;
-    }
-  }
-
-  &_price {
-    @media @tablet {
-      display: block;
-      margin-top: 10px;
-      text-align: right;
-    }
-
-    @media @desktop {
-      display: inline-block;
-      text-align: left;
-    }
-  }
-
   @media @desktop {
     margin-top: 50px;
     text-align: left;
   }
 }
 
-.example__slider {
-  position: relative;
+.example__text {
+  @media @tablet {
+    /*margin-top: 50px;*/
+    display: block;
+    text-align: right;
+  }
 
   @media @desktop {
-    width: 650px;
-  }
-}
-
-.example__state {
-  .content-tagline();
-  display: flex;
-  justify-content: space-between;
-  margin: 0 44px 0 39px;
-
-  &_before,
-  &_after {
+    margin-right: 64px;
     display: inline-block;
-    padding-bottom: 5px;
-    border: 1px solid transparent;
-
-    @media @tablet {
-      border-bottom: 1px dotted @gray;
-    }
-
-    &:hover,
-    &:focus {
-      @media @tablet {
-        border-bottom: 1px solid @black-40;
-      }
-    }
-
-    &:active {
-      @media @tablet {
-        border-bottom: 1px solid transparent;
-      }
-    }
+    text-align: left;
   }
 }
 
-.example__range_line {
-  position: absolute;
-  top: 3px;
-  left: 93px;
-  width: 84px;
-  height: 14px;
-  border: 1px solid @gray-dark;
-  background-color: @white;
-  border-radius: 6px;
-
+.example__price {
   @media @tablet {
-    top: 8px;
-    left: 134px;
-    width: 428px;
-    height: 6px;
-    border-radius: 2.5px;
-    border: 0 none;
-    background-color: @white-dark;
-  }
-}
-
-.example__range_toggle {
-  position: absolute;
-  top: 7px;
-  left: 98px;
-  width: 35px;
-  height: 6px;
-  background-color: @green;
-  border-radius: 3px;
-
-  @media @tablet {
-    top: -5px;
-    left: 350px;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid @gray-dark;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-    background-color: @white;
+    display: block;
+    margin-top: 10px;
+    text-align: right;
   }
 
-  &::before {
-    @media @tablet {
-      content: "";
-      position: absolute;
-      top: 11px;
-      left: 11px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: @green;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    @media @tablet {
-      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
-    }
-  }
-
-  &:active {
-    &::before {
-      @media @tablet {
-        top: 10px;
-        left: 10px;
-      }
-    }
-
-    @media @tablet {
-      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
-      border: 2px solid @green;
-    }
+  @media @desktop {
+    display: inline-block;
+    text-align: left;
   }
 }
