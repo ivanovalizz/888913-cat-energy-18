@@ -4,12 +4,26 @@
 .slider {
   @media @tablet {
     background: linear-gradient(to right, @gray-light 50%, @gray 50%) 0 170px no-repeat;
-    height: 700px; // TODO: Избавься как только у слайдера появятся картинки!!!!
   }
 
   @media @desktop {
-    width: 650px;
+    /*width: 650px;*/
     background-position: 0 189px;
+  }
+}
+
+.slider__controls {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: calc((100vw - @mobile-width)/ 2 + 59px);
+  margin-left: calc((100vw - @mobile-width)/ 2 + 54px);
+
+  @media @tablet {
+    margin: 0;
+  }
+
+  @media @desktop {
+    margin-right: calc((100vw - @desktop-width)/ 2);
   }
 }
 
@@ -17,6 +31,7 @@
   .content-tagline();
   display: inline-block;
   padding-bottom: 5px;
+  min-width: 50px;
   border: 1px solid transparent;
 
   @media @tablet {
@@ -35,17 +50,34 @@
       border-bottom: 1px solid transparent;
     }
   }
+
+  &_before {
+    margin-right: 10px;
+
+    @media @tablet {
+      margin-right: 24px;
+    }
+  }
+
+  &_after {
+    margin-left: 18px;
+
+    @media @tablet {
+      margin-left: 21px;
+    }
+  }
 }
 
 .slider__range {
   position: relative;
+  flex-grow: 1;
 }
 
 .slider__line {
   position: absolute;
   top: 3px;
-  left: 93px;
-  width: 84px;
+  left: 0;
+  width: 100%;
   height: 14px;
   border: 1px solid @gray-dark;
   background-color: @white;
@@ -53,8 +85,7 @@
 
   @media @tablet {
     top: 8px;
-    left: 134px;
-    width: 428px;
+    /*left: 134px;*/
     height: 6px;
     border-radius: 2.5px;
     border: 0 none;
@@ -65,17 +96,19 @@
 .slider__toggle {
   position: absolute;
   top: 7px;
-  left: 98px;
-  width: 35px;
+  left: 6px;
+  width: 41%;
   height: 6px;
   background-color: @green;
   border-radius: 3px;
+  cursor: pointer;
 
   @media @tablet {
     top: -5px;
-    left: 350px;
+    left: 50%;
     width: 32px;
     height: 32px;
+    transform: translateX(-50%);
     border-radius: 50%;
     border: 1px solid @gray-dark;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);

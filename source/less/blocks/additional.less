@@ -28,19 +28,19 @@
   .content-title();
   position: relative;
   /*margin-left: -20px;*/
-  padding-left: calc((100vw - @mobile-width)/2);
+  padding-left: calc((100vw - @mobile-width) / 2);
 
   @media @tablet {
     margin-top: 70px;
     margin-bottom: 75px;
     margin-left: 0;
-    padding-left: calc((100vw - @tablet-width)/2);
+    padding-left: calc((100vw - @tablet-width) / 2);
     border: none;
   }
 
   @media @desktop {
     /*margin-left: -40px;*/
-    padding-left: calc((100vw - @desktop-width)/2);
+    padding-left: calc((100vw - @desktop-width) / 2);
   }
 
   &::before {
@@ -52,10 +52,6 @@
     height: 3px;
     background-color: @green;
     z-index: -1;
-
-    @media @tablet {
-      top: 50%; /* 91px*/
-    }
   }
 }
 
