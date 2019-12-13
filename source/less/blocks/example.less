@@ -2,18 +2,33 @@
 @import "../mixins.less";
 
 .example {
+  position: relative;
   padding: 15px 0 38px;
   background-color: @gray-light;
 
   @media @tablet {
     .bordered-top();
-    background: none;
+    padding: 50px 0 68px;
+    background: linear-gradient(transparent 54%, @gray-light 54%);
   }
 
   @media @desktop {
     padding: 60px 0 70px;
-    border: none;
+    border: 0 none;
     background: linear-gradient(transparent 30%, @gray-light 30%);
+  }
+}
+
+.example__container {
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__column {
+  @media @desktop {
+    width: 570px;
   }
 }
 
@@ -32,7 +47,7 @@
   @media @desktop {
     margin-top: 140px;
     /*padding-right: 226px;*/
-    width: 36%;
+    width: 76%;
   }
 }
 
@@ -41,10 +56,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 55px;
   }
 
   @media @desktop {
     display: block;
+    margin-top: 0;
   }
 }
 
@@ -55,13 +72,13 @@
   justify-content: space-between;
 
   @media @tablet {
-    margin-top: 55px;
+    margin-top: 0;
     width: 50%;
   }
 
   @media @desktop {
     margin-top: 70px;
-    width: 30%;
+    width: 65%;
   }
 }
 
@@ -132,39 +149,35 @@
   font-size: 14px;
   text-align: center;
 
-  &_text {
-    @media @tablet {
-      /*margin-top: 50px;*/
-      display: block;
-      text-align: right;
-    }
-
-    @media @desktop {
-      margin-right: 64px;
-      display: inline-block;
-      text-align: left;
-    }
-  }
-
-  &_price {
-    @media @tablet {
-      display: block;
-      margin-top: 10px;
-      text-align: right;
-    }
-
-    @media @desktop {
-      display: inline-block;
-      text-align: left;
-    }
-  }
-
   @media @desktop {
     margin-top: 50px;
     text-align: left;
   }
 }
 
-.example__state {
-  .content-tagline();
+.example__text {
+  @media @tablet {
+    /*margin-top: 50px;*/
+    display: block;
+    text-align: right;
+  }
+
+  @media @desktop {
+    margin-right: 64px;
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.example__price {
+  @media @tablet {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+  }
+
+  @media @desktop {
+    display: inline-block;
+    text-align: left;
+  }
 }
