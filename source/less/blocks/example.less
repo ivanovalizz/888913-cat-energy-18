@@ -2,13 +2,14 @@
 @import "../mixins.less";
 
 .example {
+  position: relative;
   padding: 15px 0 38px;
   background-color: @gray-light;
 
   @media @tablet {
     .bordered-top();
     padding: 50px 0 68px;
-    background: none;
+    background: linear-gradient(transparent 54%, @gray-light 54%);
   }
 
   @media @desktop {
@@ -21,6 +22,7 @@
 .example__container {
   @media @desktop {
     display: flex;
+    justify-content: space-between;
   }
 }
 

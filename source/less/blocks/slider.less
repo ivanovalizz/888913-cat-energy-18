@@ -3,28 +3,51 @@
 
 .slider {
   @media @tablet {
-    background: linear-gradient(to right, @gray-light 50%, @gray 50%) 0 170px no-repeat;
+    margin: 0 auto;
+    width: 568px;
   }
 
   @media @desktop {
-    /*width: 650px;*/
-    background-position: 0 144px;
+    margin: 0;
+  }
+
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: @gray;
+    z-index: 0;
+
+    @media @tablet {
+      content: "";
+      top: 54%;
+      width: calc((100vw - @tablet-width) / 2 + 284px + 90px); //Не знаю откуда получилось 90, было 30
+    }
+
+    @media @desktop {
+      content: "";
+      top: 30%;
+      width: calc((100vw - @desktop-width) / 2 + 284px + 30px); //Должно быть 40px - размер паддинга контейнера, но по неведомым причинам (скролл) уменьшила до 30
+    }
+  }
+}
+
+.slider__image {
+  position: relative;
+  width: 311px;
+  height: 232px;
+  z-index: 5;
+
+  @media @tablet {
+    width: 596px;
+    height: 517px;
   }
 }
 
 .slider__controls {
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
-  margin-right: calc((100vw - @mobile-width)/ 2 + 59px);
-  margin-left: calc((100vw - @mobile-width)/ 2 + 54px);
-
-  @media @tablet {
-    margin: 0;
-  }
-
-  @media @desktop {
-    margin-right: calc((100vw - @desktop-width)/ 2);
-  }
 }
 
 .slider__state {
