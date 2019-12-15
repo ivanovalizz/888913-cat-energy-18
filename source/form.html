@@ -34,7 +34,9 @@
   <div class="container">
     <h2 class="form__title">Подбор программы</h2>
     <p class="form__tagline">Заполните анкету и мы подберем программу питания для вашего кота</p>
-    <form method="post" action="https://echo.htmlacademy.ru" class="form">
+  </div>
+  <form method="post" action="https://echo.htmlacademy.ru" class="form">
+    <div class="form__container container">
       <div class="form__main-content">
         <fieldset class="form__wrapper form__wrapper_main-info">
           <p class="form__item">
@@ -65,8 +67,10 @@
           </p>
         </fieldset>
       </div>
-      <fieldset class="form__wrapper form__wrapper_contacts">
-        <h2 class="form__wrapper-title">Контактные данные (владельца кота)</h2>
+    </div>
+    <fieldset class="form__wrapper form__wrapper_contacts">
+      <h2 class="form__wrapper-title"><span class="form__title-text">Контактные данные (владельца кота)</span></h2>
+      <div class="form__container container">
         <div class="form__wrapper-contacts">
           <p class="form__item">
             <label for="email" class="form__label form__label_input">Email:*</label>
@@ -77,13 +81,17 @@
             <input type="tel" class="form__input_number input" id="phone" placeholder="8 (960) 900-60-90" pattern="8\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
           </p>
         </div>
-      </fieldset>
-      <fieldset class="form__wrapper form__wrapper_comments">
-        <h2 class="form__wrapper-title">Комментарии</h2>
+      </div>
+    </fieldset>
+    <fieldset class="form__wrapper form__wrapper_comments">
+      <h2 class="form__wrapper-title"><span class="form__title-text">Комментарии</span></h2>
+      <div class="form__container container">
         <textarea class="form__comment form__comment_textarea" title="Поле ввода">Расскажите обо всех повадках кота</textarea>
-      </fieldset>
-      <fieldset class="form__wrapper form__wrapper_additional">
-        <h2 class="form__wrapper-title">Дополнительно</h2>
+      </div>
+    </fieldset>
+    <fieldset class="form__wrapper form__wrapper_additional">
+      <h2 class="form__wrapper-title"><span class="form__title-text">Дополнительно</span></h2>
+      <div class="container form__container">
         <div class="form__wrapper-checkbox">
           <p class="form__item form-control form-control_checkbox">
             <input type="checkbox" class="visually-hidden form-control__checkbox" id="sugar">
@@ -102,16 +110,18 @@
             <label for="vitamins" class="form__label form-control__label form-control__label_checkbox">Витамины</label>
           </p>
         </div>
-      </fieldset>
+      </div>
+    </fieldset>
+    <div class="form__container container">
       <div class="form__manage">
         <button type="submit" class="button form__button">Отправить заявку</button>
         <p class="form__help">* — Обязательные поля</p>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
   <section class="contacts">
     <h2 class="visually-hidden">Контактная информация</h2>
-    <div class="contacts__container container">
+    <div class="contacts__container">
       <div class="contacts__wrapper">
         <p class="contacts__tagline">Приглашаем к сотрудничеству дилеров!</p>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -121,7 +131,7 @@
   </section>
 </main>
 <footer class="page-footer">
-  <div class="page-footer__container container">
+  <div class="page-footer__container form__container container">
     <a href="index.html" class="page-footer__logo">
       <img src="img/logo-footer.svg" alt="Логотип" class="page-footer__logo-image" width="127" height="23">
     </a>
