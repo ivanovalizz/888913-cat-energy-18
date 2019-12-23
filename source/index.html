@@ -12,8 +12,8 @@
   <div class="page-header__container container">
     <a class="page-header__logo page-header__logo_active">
       <picture class="page-header__picture">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
         <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
         <img src="img/logo-mobile.svg" alt="Логотип магазина Кэт Энерджи" class="page-header__logo-image" width="190" height="37">
       </picture>
     </a>
@@ -113,10 +113,15 @@
         <div class="example__slider">
           <div class="slider">
             <div class="slider__image">
-              <picture class="slider__picture">
+              <picture class="slider__picture slider__picture_before">
                 <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                 <img class="slider__image slider__image_before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Изображение кота до похудения">
+              </picture>
+              <picture class="slider__picture slider__picture_after">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="slider__image slider__image_after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Изображение кота после похудения">
               </picture>
             </div>
             <div class="slider__controls">
@@ -131,47 +136,6 @@
         </div>
       </div>
     </div>
-
-
-    <!--<div class="example__container container">
-      <div class="example__column">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__content">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в
-          день.</p>
-        <div class="example__wrapper">
-          <ul class="example__list">
-            <li class="example__item">
-              <span class="example__value">5 кг</span>
-              <span class="example__parameter example__parameter_weight">Снижение веса</span>
-            </li>
-            <li class="example__item">
-              <span class="example__value">60 дней</span>
-              <span class="example__parameter example__parameter_time">Затрачено времени</span>
-            </li>
-          </ul>
-          <p class="example__tagline">
-            <span class="example__text">Затраты на питание:</span>
-            <span class="example__price">15000 руб.</span>
-          </p>
-        </div>
-      </div>
-      <div class="example__slider">
-        &lt;!&ndash;<img src="" alt="">
-        <img src="" alt="">&ndash;&gt;
-        <div class="slider">
-          <img class="slider__image slider__image_after" src="../img/after-desktop@1x.png" width="690" height="519">
-          <div class="slider__controls">
-            <button class="slider__state slider__state_before">Было</button>
-            <div class="slider__range">
-              <div class="slider__line"></div>
-              <div class="slider__toggle"></div>
-            </div>
-            <button class="slider__state slider__state_after">Стало</button>
-          </div>
-        </div>
-      </div>
-    </div>-->
   </section>
   <section class="contacts contacts_index">
     <h2 class="visually-hidden">Контактная информация</h2>

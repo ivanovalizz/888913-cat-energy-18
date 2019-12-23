@@ -9,7 +9,26 @@
   }
 }
 
+.catalog-item__link {
+  display: block;
+}
+
 .catalog-item__image {
+  width: 100%;
+  height: auto;
+
+  @media @tablet {
+    margin-top: -46px;
+  }
+
+  &_size-large {
+    @media @tablet {
+      margin-top: -73px;
+    }
+  }
+}
+
+/*.catalog-item__image {
   display: block;
   width: 140px;
   height: 144px;
@@ -18,7 +37,7 @@
     width: 0;
     height: 0;
   }
-}
+}*/
 
 .catalog-item__title {
   .content-tagline();
@@ -29,6 +48,7 @@
   @media @tablet {
     display: block;
     text-align: center;
+    margin-top: 30px;
     padding: 0 50px;
   }
 
