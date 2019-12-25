@@ -4,23 +4,27 @@
 .page-header {
   position: relative;
 
-  @media @desktop {
-    background: linear-gradient(to right, @white 50%, @bg-green 50%);
-  }
-
-  &::before {
+  &_index {
     @media @desktop {
-      position: absolute;
-      content: "";
-      top: 0;
-      right: 0;
-      width: calc(50% + 1px);
-      background: url("../img/index-background-desktop@1x.jpg") no-repeat 0 0;
-      /*background-size: 50% auto;*/
+      background: linear-gradient(to right, @white 50%, @bg-green 50%);
+    }
 
-      /*@media (min-resolution: @retina-dppx) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
-      }*/
+    &::before {
+      @media @desktop {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 696px;
+        z-index: 1;
+        background: url("../img/index-background-desktop@1x.jpg") no-repeat 0 0;
+
+        @media (min-resolution: @retina-dppx) {
+          background-image: url("../img/index-background-desktop@2x.jpg");
+          background-size: 100% auto;
+        }
+      }
     }
   }
 }
