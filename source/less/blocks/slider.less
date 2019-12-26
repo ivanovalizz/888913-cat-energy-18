@@ -8,12 +8,12 @@
   @media @desktop {
     margin-top: 0;
     padding-bottom: 68px;
-    background: linear-gradient(to right, @gray-light 50%, @gray 50%);
   }
 }
 
 .slider__image {
   margin: 0 auto;
+  position: relative;
 
   &_before,
   &_after {
@@ -24,10 +24,11 @@
       width: calc(338px * 2);
       height: 499px;
     }
+  }
 
-    @media @desktop {
-      margin-top: -160px;
-    }
+  &_after {
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -170,10 +171,21 @@
 
 .slider__picture {
   &_before {
-    display: block;
+    width: 50%;
+    overflow: hidden;
+    z-index: 2;
+
+    @media @desktop {
+      margin-top: -160px;
+    }
   }
 
   &_after {
-    display: none;
+    position: absolute;
+    z-index: 3;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    overflow: hidden;
   }
 }
