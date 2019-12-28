@@ -5,8 +5,13 @@
 .slider {
   margin-top: 40px;
 
+  @media @tablet {
+    margin-top: 81px;
+  }
+
   @media @desktop {
     margin-top: 0;
+    margin-right: -40px;
     padding-bottom: 68px;
   }
 }
@@ -21,8 +26,13 @@
     height: 232px;
 
     @media @tablet {
-      width: calc(338px * 2);
-      height: 499px;
+      width: 676px;
+      height: 518px;
+    }
+
+    @media @desktop {
+      width: 688px;
+      height: 518px;
     }
   }
 
@@ -33,16 +43,24 @@
 }
 
 .slider__controls {
-  margin-top: 30px;
-  padding-right: 25px;
-  padding-left: 44px;
+  margin-top: 29px;
+  padding-right: 34px;
+  padding-left: 37px;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
 
   @media @tablet {
-    padding-right: 70px;
-    padding-left: 70px;
+    margin-top: 14px;
+    padding-right: 69px;
+    padding-left: 67px;
+  }
+
+  @media @desktop {
+    margin-top: 35px;
+    margin-right: 0;
+    padding-right: 39px;
+    padding-left: 76px;
   }
 }
 
@@ -72,18 +90,18 @@
   }
 
   &_before {
-    margin-right: 10px;
+    margin-right: 12px;
 
     @media @tablet {
-      margin-right: 24px;
+      margin-right: 23px;
     }
   }
 
   &_after {
-    margin-left: 18px;
+    margin-left: 13px;
 
     @media @tablet {
-      margin-left: 21px;
+      margin-left: 19px;
     }
   }
 }
@@ -116,7 +134,7 @@
   position: absolute;
   top: 7px;
   left: 6px;
-  width: 41%;
+  width: 42%;
   height: 6px;
   background-color: @green;
   border-radius: 3px;
@@ -171,21 +189,33 @@
 
 .slider__picture {
   &_before {
-    width: 50%;
-    overflow: hidden;
-    z-index: 2;
+    @media @tablet {
+      width: 50%;
+      overflow: hidden;
+      z-index: 2;
+    }
 
     @media @desktop {
-      margin-top: -160px;
+      margin-top: -190px;
+      width: 53%;
     }
   }
 
   &_after {
-    position: absolute;
-    z-index: 3;
-    height: 100%;
-    width: 50%;
-    right: 0;
-    overflow: hidden;
+    display: none;
+
+    @media @tablet {
+      display: block;
+      position: absolute;
+      z-index: 3;
+      height: 100%;
+      width: 50%;
+      right: 0;
+      overflow: hidden;
+    }
+
+    @media @desktop {
+      width: 47%;
+    }
   }
 }

@@ -4,10 +4,10 @@
 .promo {
   .bordered-top();
   text-align: center;
-  background: linear-gradient(to bottom, @bg-green 64%, @white 64%);
+  background: linear-gradient(to bottom, @bg-green 63.5%, @white 63.5%);
 
   @media @tablet {
-    padding-top: 60px;
+    padding-top: 54px;
     padding-bottom: 530px;
     text-align: left;
     border: 0 none;
@@ -15,14 +15,14 @@
   }
 
   @media @desktop {
-    padding-top: 110px;
-    padding-bottom: 203px;
+    padding-top: 105px;
+    padding-bottom: 188px;
     background: linear-gradient(to right, @white 50%, @bg-green 50%);
   }
 }
 
 .promo__container {
-  padding-top: 29px;
+  padding-top: 26px;
   position: relative;
   z-index: 3;
   background: url("../img/index-background-mobile@1x.jpg") no-repeat 0 0;
@@ -40,7 +40,7 @@
   &::before {
     position: absolute;
     content: "";
-    top: 155px;
+    top: 166px;
     left: 20px;
     width: 100%;
     height: 270px;
@@ -52,7 +52,7 @@
     }
 
     @media @tablet {
-      top: 195px;
+      top: 201px;
       left: 30px;
       height: 609px;
       background-image: url("../img/index-can-tablet@1x.jpg");
@@ -65,8 +65,8 @@
     }
 
     @media @desktop {
-      top: -50px;
-      left: 450px;
+      top: -80px;
+      left: 491px;
       width: 552px;
       height: 499px;
       z-index: 5;
@@ -85,41 +85,57 @@
   line-height: 36px;
   color: @white;
   margin: 0;
+  margin-left: -2px;
 
   @media @tablet {
     max-width: 420px;
     .title();
   }
+
+  @media @desktop {
+    margin-left: 1px;
+  }
 }
 
 .promo__tagline {
   .uppercase();
+  margin-top: 27px;
+  margin-bottom: 0;
   font-family: @main-font;
   line-height: 14px;
   color: @white;
-  margin-top: 19px;
-  margin-bottom: 0;
 
   @media @tablet {
-    margin-top: 33px;
+    margin-top: 42px;
+    margin-left: -2px;
     font-size: 20px;
     line-height: 20px;
     color: @black;
   }
+
+  @media @desktop {
+    margin-top: 41px;
+    margin-left: 1px;
+  }
 }
 
 .promo__button {
-  margin-top: 302px;
-  padding-top: 14px;
-  padding-bottom: 11px;
+  margin-top: 301px;
+  padding-top: 12px;
+  padding-bottom: 10px;
   font-size: 14px;
 
   @media @tablet {
-    margin-top: 48px;
+    padding: 15px 0 17px;
+    margin-top: 47px;
+    margin-left: -2px;
     width: 245px; /*46.4%*/
+    font-size: 20px;
   }
 
   @media @desktop {
-    margin-top: 53px;
+    margin-top: 52px;
+    margin-left: 0;
+    padding: 17px 2px 15px 0;
   }
 }

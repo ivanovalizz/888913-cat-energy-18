@@ -2,12 +2,16 @@
 @import "../variables.less";
 
 .intro {
-  padding-top: 12px;
-  padding-bottom: 47px;
+  padding-top: 17px;
+  padding-bottom: 42px;
 
   @media @tablet {
-    padding-top: 50px;
+    padding-top: 46px;
     padding-bottom: 0;
+  }
+
+  @media @desktop {
+    padding-top: 74px;
   }
 }
 
@@ -18,13 +22,14 @@
 
 .intro__list {
   .list-style();
-  margin-top: 30px;
+  margin-top: 28px;
   counter-reset: list1;
 
   @media @tablet {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 60px;
+    margin-top: 72px;
+    margin-bottom: -31px;
   }
 }
 
@@ -35,14 +40,14 @@
   padding: 3px 0 3px 80px;
 
   @media @tablet {
-    padding: 113px 78px 135px 0;
+    padding: 113px 78px 132px 0;
     width: 324px;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media @desktop {
-    padding: 113px 0 50px;
+    padding: 112px 0 50px;
     width: 245px;
     font-size: 16px;
     line-height: 24px;
@@ -64,7 +69,7 @@
 
   &:not(:nth-child(4n)) {
     @media @desktop {
-      margin-right: 76px;
+      margin-right: 80px;
     }
   }
 
@@ -88,7 +93,7 @@
   &::after {
     @media @tablet {
       position: absolute;
-      top: 90px;
+      top: 88px;
       font-family: @main-font;
       font-size: 281px;
       color: @gray-light;
@@ -111,7 +116,7 @@
     &::after {
       @media @tablet {
         /*content: "1";*/
-        left: 126px;
+        left: 118px;
       }
     }
   }
@@ -129,7 +134,7 @@
     &::after {
       @media @tablet {
         /*content: "2";*/
-        left: 122px;
+        left: 111px;
       }
     }
   }
@@ -147,7 +152,7 @@
     &::after {
       @media @tablet {
         /*content: "3";*/
-        left: 124px;
+        left: 113px;
       }
     }
   }
@@ -165,7 +170,7 @@
     &::after {
       @media @tablet {
         /*content: "4";*/
-        left: 125px;
+        left: 113px;
       }
     }
   }
