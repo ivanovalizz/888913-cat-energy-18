@@ -5,6 +5,10 @@
   position: relative;
   border-bottom: 1px solid @gray-lighten;
 
+  @media @tablet {
+    border: 0 none;
+  }
+
   &_index {
     @media @desktop {
       background: linear-gradient(to right, @white 50%, @bg-green 50%);

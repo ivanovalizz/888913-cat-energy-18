@@ -25,7 +25,8 @@
   padding-left: 20px;
 
   @media @tablet {
-    margin-top: 70px;
+    margin-top: 53px;
+    padding-left: 0;
   }
 }
 
@@ -37,7 +38,7 @@
   margin-top: 28px;
 
   @media @tablet {
-    margin-top: 155px;
+    margin-top: 165px;
   }
 }
 
@@ -48,7 +49,7 @@
 
   @media @tablet {
     margin: 0;
-    padding: 0 37px 40px;
+    padding: 0;
     width: 324px;
     border: 0 none;
     background-color: @gray-lighten;
@@ -60,6 +61,10 @@
 
   &:not(:first-child) {
     margin-top: -1px;
+
+    @media @tablet {
+      margin-top: 0;
+    }
   }
 
   &:nth-child(n+3) {
@@ -101,7 +106,7 @@
 
   @media @tablet {
     margin: 140px 0 0;
-    padding: 147px 37px 40px;
+    padding: 164px 37px 37px;
     width: 324px;
     background: none;
   }
@@ -123,7 +128,7 @@
 
     @media @tablet {
       top: 55px;
-      left: 133px;
+      left: 131px;
       width: 61px;
       height: 61px;
       background: url("../img/icon-plus.svg") no-repeat 0 0;
@@ -138,6 +143,10 @@
 .catalog__display {
   .content-tagline();
   margin: 0;
+
+  @media @tablet {
+    padding: 0 34px 0 37px;
+  }
 }
 
 .catalog__text {
@@ -147,36 +156,42 @@
   color: @black-lighten;
 
   @media @tablet {
-    margin-top: 28px;
+    margin-top: 25px;
+    padding-right: 10px;
+    padding-left: 11px;
     font-size: 16px;
+    line-height: 19px;
   }
 }
 
 .catalog__button {
   margin-top: 21px;
-  padding: 11px 20px;
 
   @media @tablet {
-    margin-top: 57px;
+    margin-top: 85px;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
 .catalog__tagline {
-  .bordered-top();
-  padding: 210px 80px 80px;
+  margin-top: 19px;
+  margin-bottom: 0;
+  padding: 207px 75px 77px;
   font-size: 16px;
   line-height: 20px;
   color: @white;
   text-align: center;
-  background: url("../img/icon-gift.svg") no-repeat center 65px, url("../img/gift-photo-mobile@1x.jpg") no-repeat center 20px;
+  background: url("../img/icon-gift.svg") no-repeat center 60px, url("../img/gift-photo-mobile@1x.jpg") no-repeat center 20px;
   background-size: 56px 109px, 280px 289px;
 
   @media @tablet {
-    margin-top: 69px;
+    margin-top: 70px;
     margin-bottom: 0;
-    padding: 75px 125px 69px 424px;
+    padding: 72px 120px 69px 424px;
     text-align: left;
-    background: url("../img/icon-gift.svg") no-repeat 91px center, url("../img/gift-photo-tablet@1x.jpg") no-repeat 0 0;
+    background: url("../img/icon-gift.svg") no-repeat 90px 64px, url("../img/gift-photo-tablet@1x.jpg") no-repeat 0 0;
     background-size: 56px 61px, contain;
     border: none;
   }
