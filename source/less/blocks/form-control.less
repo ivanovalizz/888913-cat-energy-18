@@ -6,7 +6,7 @@
 
   &_radio {
     &:not(:first-child) {
-      margin-top: 26px;
+      margin-top: 24px;
 
       @media @tablet {
         margin-top: 33px;
@@ -24,7 +24,7 @@
     }
 
     &:not(:first-child) {
-      margin-top: 28px;
+      margin-top: 24px;
 
       @media @tablet {
         margin: 0;
@@ -43,7 +43,7 @@
 
     &:nth-child(n+3) {
       @media @tablet {
-        margin-top: 54px;
+        margin-top: 52px;
       }
 
       @media @desktop {
@@ -55,19 +55,16 @@
 
 .form-control__label {
   position: relative;
-  padding-left: 49px;
-
-  @media @tablet {
-    padding-left: 59px;
-  }
 
   &_radio {
+    padding-left: 45px;
+
     &::before {
       position: absolute;
-      top: -4px;
-      left: 0;
-      width: 30px;
-      height: 30px;
+      top: -9px;
+      left: -15px;
+      width: 40px;
+      height: 40px;
       border: 1px solid @gray-dark;
       border-radius: 50%;
       content: "";
@@ -75,6 +72,12 @@
   }
 
   &_checkbox {
+    padding-left: 46px;
+
+    @media @tablet {
+      padding-left: 57px;
+    }
+
     &::before {
       position: absolute;
       top: -4px;
@@ -111,4 +114,11 @@
   background-color: @green;
   border-radius: 50%;
   content: "";
+
+  @media @tablet {
+    top: 3px;
+    left: -3px;
+    width: 16px;
+    height: 16px;
+  }
 }

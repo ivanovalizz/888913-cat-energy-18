@@ -49,7 +49,7 @@
           </p>
           <p class="form__item">
             <label for="weight" class="form__label">Вес (кг):*</label>
-            <input type="text" class="input" id="weight" placeholder="7">
+            <input type="text" class="form__input_weight input" id="weight" placeholder="7">
           </p>
           <p class="form__item">
             <label for="age" class="form__label">Возраст (лет):</label>
@@ -73,11 +73,11 @@
       </div>
     </div>
     <fieldset class="form__wrapper form__wrapper_contacts">
-      <h2 class="form__title-wrap"><span class="form__title">Контактные данные (владельца кота)</span></h2>
+      <h2 class="form__title-wrap form__title-wrap_contacts"><span class="form__title form__title_contacts">Контактные данные (владельца кота)</span></h2>
       <div class="form__container container">
         <div class="form__wrapper-contacts">
           <p class="form__item">
-            <label for="email" class="form__label form__label_input">Email:*</label>
+            <label for="email" class="form__label form__label_input">E-mail:*</label>
             <input type="email" class="form__input_email input" id="email" placeholder="kuklachev@gmail.com">
           </p>
           <p class="form__item">
@@ -88,13 +88,13 @@
       </div>
     </fieldset>
     <fieldset class="form__wrapper form__wrapper_comments">
-      <h2 class="form__title-wrap"><span class="form__title">Комментарии</span></h2>
+      <h2 class="form__title-wrap form__title-wrap_comments"><span class="form__title form__title_comments">Комментарий</span></h2>
       <div class="form__container container">
         <textarea class="form__comment form__comment_textarea" title="Поле ввода">Расскажите обо всех повадках кота</textarea>
       </div>
     </fieldset>
     <fieldset class="form__wrapper form__wrapper_additional">
-      <h2 class="form__title-wrap"><span class="form__title">Дополнительно</span></h2>
+      <h2 class="form__title-wrap form__title-wrap_additional"><span class="form__title form__title_additional">Дополнительно</span></h2>
       <div class="container form__container">
         <div class="form__wrapper-checkbox">
           <p class="form__item form-control form-control_checkbox">
@@ -123,15 +123,18 @@
       </div>
     </div>
   </form>
-  <section class="contacts">
+  <section class="contacts contacts_page-form">
     <h2 class="visually-hidden">Контактная информация</h2>
-    <div class="contacts__container">
+    <div class="contacts__container container">
       <div class="contacts__wrapper">
-        <p class="contacts__tagline">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="contacts__tagline">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__address-city">Санкт-Петербург</span></p>
       </div>
     </div>
-    <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/-/CBFXQGSKCD" width="100%" height="400" frameborder="1" allowfullscreen="true"></iframe>
+    <div class="contacts__map-wrap">
+      <p class="contacts__map-image"></p>
+      <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/-/CBFXQGSKCD" width="100%" height="100%" frameborder="1" allowfullscreen="true"></iframe>
+    </div>
   </section>
 </main>
 <footer class="page-footer">
