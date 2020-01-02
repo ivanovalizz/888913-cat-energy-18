@@ -20,7 +20,7 @@
     }
 
     @media @desktop {
-      width: 25%;
+      width: auto;
     }
 
     &:not(:first-child) {
@@ -28,6 +28,12 @@
 
       @media @tablet {
         margin: 0;
+      }
+    }
+
+    &:not(:nth-child(4n)) {
+      @media @desktop {
+        width: 26.67%;
       }
     }
 
