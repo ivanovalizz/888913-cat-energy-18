@@ -11,4 +11,19 @@
   @media @tablet {
     padding: 10px 18px;
   }
+
+  &:hover,
+  &:focus {
+    border: 1px solid @gray-dark;
+  }
+
+  &:active {
+    border: 2px solid @black-lighten;
+  }
+
+  &.submitted { /*TODO: С помощью js при отправке формы полям добавляется класс .submitted */
+    &:invalid {
+      border: 2px solid @error;
+    }
+  }
 }

@@ -96,6 +96,7 @@
   flex-wrap: wrap;
 
   @media @tablet {
+    justify-content: flex-start;
     margin-top: 0;
     /*width: 50%;*/
   }
@@ -108,10 +109,10 @@
 }
 
 .example__item {
-  width: 50%;
+  max-width: 124px;
 
   @media @tablet {
-    width: auto;
+    max-width: 162px;
   }
 
   &:nth-child(2n-1) {
@@ -153,7 +154,7 @@
 
   &_weight {
     @media @tablet {
-      margin: 0 26px;
+      margin: 0 25px;
     }
   }
 
