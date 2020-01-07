@@ -65,12 +65,14 @@
   padding-right: 1px;
 
   @media @tablet {
+    padding-right: 10px;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media @desktop {
     margin-top: 71px;
+    padding-right: 0;
     width: 76%;
   }
 }
@@ -121,6 +123,10 @@
     @media @tablet {
       margin-right: 42px;
     }
+
+    @media @desktop {
+      margin-right: 44px;
+    }
   }
 }
 
@@ -134,6 +140,7 @@
   border-radius: 3px;
 
   @media @tablet {
+    margin-right: -3px;
     padding: 15px 0 18px;
     font-size: 30px;
     line-height: 37px;
@@ -180,7 +187,7 @@
 
 .example__tagline {
   .content-tagline();
-  margin-top: 19px;
+  margin-top: 20px;
   margin-bottom: 0;
   font-size: 14px;
   text-align: center;
@@ -198,6 +205,7 @@
 
 .example__text {
   @media @tablet {
+    margin-top: -2px;
     display: block;
     text-align: right;
   }
@@ -213,7 +221,7 @@
 .example__price {
   @media @tablet {
     display: block;
-    margin-top: 10px;
+    margin-top: 9px;
     text-align: right;
   }
 

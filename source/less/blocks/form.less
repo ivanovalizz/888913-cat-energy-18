@@ -73,7 +73,7 @@
     margin-top: 38px;
 
     @media @tablet {
-      margin-top: 65px;
+      margin-top: 67px;
     }
 
     @media @desktop {
@@ -144,7 +144,7 @@
       margin-top: 66px;
     }
 
-    @media @tablet {
+    @media @desktop {
       margin-top: 68px;
     }
   }
@@ -156,7 +156,7 @@
       margin-top: 61px;
     }
 
-    @media @tablet {
+    @media @desktop {
       margin-top: 63px;
     }
   }
@@ -218,6 +218,10 @@
     z-index: -1;
 
     @media @tablet {
+      top: 21px;
+    }
+
+    @media @desktop {
       top: 22px;
     }
   }
@@ -258,15 +262,57 @@
   &:first-child {
     margin-top: 0;
   }
+
+  &_number {
+    @media @tablet {
+      margin-left: -3px;
+    }
+  }
 }
 
 .form__label {
   .form-label();
-  margin-right: 15px;
+  margin-right: 14px;
   white-space: nowrap;
 
   @media @tablet {
     margin-right: 17px;
+  }
+
+  &_weight {
+    margin-right: 17px;
+
+    @media @tablet {
+      margin-right: 20px;
+    }
+  }
+
+  &_age {
+    margin-right: 14px;
+
+    @media @tablet {
+      margin-right: 17px;
+    }
+  }
+
+  &_email {
+    margin-right: 12px;
+
+    @media @tablet {
+      margin-right: 19px;
+    }
+
+    @media @tablet {
+      margin-right: 22px;
+    }
+  }
+
+  &_number {
+    margin-right: 10px;
+
+    @media @tablet {
+      margin-right: 16px;
+    }
   }
 }
 
@@ -341,19 +387,37 @@
 .form__input {
   &_weight {
     @media @tablet {
-      padding: 10px 21px;
+      padding: 10px 18px;
     }
   }
 
   &_email {
+    background: url("../img/icon-mail.svg") no-repeat 184px 14px;
+    background-size: 18px 14px;
+
     @media @tablet {
-      padding: 10px 22px;
+      background-position: 512px 18px;
+      padding: 10px 20px;
+    }
+
+    @media @desktop {
+      background-position: 448px 20px;
+      padding: 10px 18px;
     }
   }
 
   &_number {
+    background: url("../img/icon-phone.svg") no-repeat 169px 12px;
+    background-size: 21px;
+
     @media @tablet {
-      padding: 10px 15px;
+      background-position: 497px 16px;
+      padding: 9px 19px 11px;
+    }
+
+    @media @desktop {
+      background-position: 431px 16px;
+      padding: 10px 17px;
     }
   }
 }

@@ -3,7 +3,7 @@
 @import "../mixins.less";
 
 .slider {
-  margin-top: 40px;
+  margin-top: 35px;
 
   @media @tablet {
     margin-top: 81px;
@@ -22,8 +22,8 @@
 
   &_before,
   &_after {
-    width: 311px;
-    height: 232px;
+    width: 318px;
+    height: 238px;
 
     @media @tablet {
       width: 676px;
@@ -37,13 +37,15 @@
   }
 
   &_after {
-    position: absolute;
-    right: 0;
+    @media @tablet {
+      position: absolute;
+      right: 0;
+    }
   }
 }
 
 .slider__controls {
-  margin-top: 29px;
+  margin-top: 28px;
   padding-right: 34px;
   padding-left: 37px;
   position: relative;
@@ -188,15 +190,25 @@
 }
 
 .slider__picture {
+  margin-left: -19px;
+
+  @media @tablet {
+    margin-left: 0;
+  }
+
   &_before {
+    display: block;
+
     @media @tablet {
-      width: 50%;
+      margin-left: 18px;
+      width: 47.5%;
       overflow: hidden;
       z-index: 2;
     }
 
     @media @desktop {
       margin-top: -190px;
+      margin-left: 0;
       width: 53%;
     }
   }
@@ -205,16 +217,18 @@
     display: none;
 
     @media @tablet {
+      margin-right: 8px;
       display: block;
       position: absolute;
       z-index: 3;
       height: 100%;
-      width: 50%;
+      width: 49%;
       right: 0;
       overflow: hidden;
     }
 
     @media @desktop {
+      margin-right: 0;
       width: 47%;
     }
   }
