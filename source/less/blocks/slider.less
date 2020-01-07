@@ -1,53 +1,69 @@
+
 @import "../variables.less";
 @import "../mixins.less";
 
 .slider {
+  margin-top: 35px;
+
   @media @tablet {
-    margin: 0 auto;
-    width: 568px;
+    margin-top: 81px;
   }
 
   @media @desktop {
-    margin: 0;
-  }
-
-  &::before {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-color: @gray;
-    z-index: 0;
-
-    @media @tablet {
-      content: "";
-      top: 54%;
-      width: calc((100vw - @tablet-width) / 2 + 284px + 90px); //Не знаю откуда получилось 90, было 30
-    }
-
-    @media @desktop {
-      content: "";
-      top: 30%;
-      width: calc((100vw - @desktop-width) / 2 + 284px + 30px); //Должно быть 40px - размер паддинга контейнера, но по неведомым причинам (скролл) уменьшила до 30
-    }
+    margin-top: 0;
+    margin-right: -40px;
+    padding-bottom: 68px;
   }
 }
 
 .slider__image {
+  margin: 0 auto;
   position: relative;
-  width: 311px;
-  height: 232px;
-  z-index: 5;
 
-  @media @tablet {
-    width: 596px;
-    height: 517px;
+  &_before,
+  &_after {
+    width: 318px;
+    height: 238px;
+
+    @media @tablet {
+      width: 676px;
+      height: 518px;
+    }
+
+    @media @desktop {
+      width: 688px;
+      height: 518px;
+    }
+  }
+
+  &_after {
+    @media @tablet {
+      position: absolute;
+      right: 0;
+    }
   }
 }
 
 .slider__controls {
+  margin-top: 28px;
+  padding-right: 34px;
+  padding-left: 37px;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
+
+  @media @tablet {
+    margin-top: 14px;
+    padding-right: 69px;
+    padding-left: 67px;
+  }
+
+  @media @desktop {
+    margin-top: 35px;
+    margin-right: 0;
+    padding-right: 39px;
+    padding-left: 76px;
+  }
 }
 
 .slider__state {
@@ -76,18 +92,18 @@
   }
 
   &_before {
-    margin-right: 10px;
+    margin-right: 12px;
 
     @media @tablet {
-      margin-right: 24px;
+      margin-right: 23px;
     }
   }
 
   &_after {
-    margin-left: 18px;
+    margin-left: 13px;
 
     @media @tablet {
-      margin-left: 21px;
+      margin-left: 19px;
     }
   }
 }
@@ -109,7 +125,6 @@
 
   @media @tablet {
     top: 8px;
-    /*left: 134px;*/
     height: 6px;
     border-radius: 2.5px;
     border: 0 none;
@@ -121,7 +136,7 @@
   position: absolute;
   top: 7px;
   left: 6px;
-  width: 41%;
+  width: 42%;
   height: 6px;
   background-color: @green;
   border-radius: 3px;
@@ -170,6 +185,51 @@
     @media @tablet {
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
       border: 2px solid @green;
+    }
+  }
+}
+
+.slider__picture {
+  margin-left: -19px;
+
+  @media @tablet {
+    margin-left: 0;
+  }
+
+  &_before {
+    display: block;
+
+    @media @tablet {
+      margin-left: 18px;
+      width: 47.5%;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    @media @desktop {
+      margin-top: -190px;
+      margin-left: 0;
+      width: 53%;
+    }
+  }
+
+  &_after {
+    display: none;
+
+    @media @tablet {
+      margin-right: 8px;
+      display: block;
+      position: absolute;
+      z-index: 3;
+      height: 100%;
+      width: 49%;
+      right: 0;
+      overflow: hidden;
+    }
+
+    @media @desktop {
+      margin-right: 0;
+      width: 47%;
     }
   }
 }

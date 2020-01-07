@@ -6,7 +6,7 @@
 
   &_radio {
     &:not(:first-child) {
-      margin-top: 26px;
+      margin-top: 24px;
 
       @media @tablet {
         margin-top: 33px;
@@ -20,14 +20,20 @@
     }
 
     @media @desktop {
-      width: 25%;
+      width: auto;
     }
 
     &:not(:first-child) {
-      margin-top: 28px;
+      margin-top: 24px;
 
       @media @tablet {
         margin: 0;
+      }
+    }
+
+    &:not(:nth-child(4n)) {
+      @media @desktop {
+        width: 26.67%;
       }
     }
 
@@ -43,7 +49,7 @@
 
     &:nth-child(n+3) {
       @media @tablet {
-        margin-top: 54px;
+        margin-top: 52px;
       }
 
       @media @desktop {
@@ -55,13 +61,10 @@
 
 .form-control__label {
   position: relative;
-  padding-left: 49px;
-
-  @media @tablet {
-    padding-left: 59px;
-  }
 
   &_radio {
+    padding-left: 45px;
+
     &::before {
       position: absolute;
       top: -4px;
@@ -71,10 +74,23 @@
       border: 1px solid @gray-dark;
       border-radius: 50%;
       content: "";
+
+      @media @tablet {
+        top: -9px;
+        left: -15px;
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
   &_checkbox {
+    padding-left: 46px;
+
+    @media @tablet {
+      padding-left: 57px;
+    }
+
     &::before {
       position: absolute;
       top: -4px;
@@ -90,6 +106,17 @@
         height: 40px;
       }
     }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: @input;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -111,4 +138,11 @@
   background-color: @green;
   border-radius: 50%;
   content: "";
+
+  @media @tablet {
+    top: 3px;
+    left: -3px;
+    width: 16px;
+    height: 16px;
+  }
 }

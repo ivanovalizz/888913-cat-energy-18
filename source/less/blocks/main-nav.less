@@ -6,6 +6,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+  z-index: 40;
 
   .main-nav__toggle {
     &::before,
@@ -27,13 +28,10 @@
 
     .main-nav__toggle {
       &::before {
-        /*content: "";
-        position: absolute;*/
-        top: 20px;
-        left: 20px;
-        width: 25px;
+        top: 24px;
+        left: 26px;
+        width: 24px;
         height: 3px;
-        /*background-color: @black-light;*/
         box-shadow: 0 8px 0 0 @black-light, 0 16px 0 0 @black-light;
       }
 
@@ -78,7 +76,7 @@
 
     .main-nav__list {
       position: absolute;
-      top: 65px;
+      top: 63px;
       left: 0;
       width: 100%;
       z-index: 10;
@@ -113,13 +111,13 @@
   .list-style();
 
   @media @tablet {
-    padding-top: 40px;
+    padding-top: 42px;
     display: flex;
     flex-wrap: wrap;
   }
 
   @media @desktop {
-    padding-top: 70px;
+    padding-top: 73px;
   }
 }
 
@@ -127,8 +125,12 @@
   background-color: @white;
 
   @media @tablet {
-    padding-left: 37px;
+    padding-left: 36px;
     background: none;
+  }
+
+  @media @desktop {
+    padding-left: 34px;
   }
 
   &:last-child {
@@ -152,7 +154,7 @@
 
   @media @tablet {
     padding-top: 0;
-    padding-bottom: 9px;
+    padding-bottom: 7px;
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
@@ -160,24 +162,17 @@
   }
 
   @media @desktop {
-    color: @white;
+    padding-bottom: 8px;
+    font-size: 20px;
   }
 
   &:hover,
   &:focus {
     color: @black-60;
-
-    @media @desktop {
-      color: @white-60;
-    }
   }
 
   &:active {
     color: @black-30;
-
-    @media @desktop {
-      color: @white-30;
-    }
   }
 
   &_active {
@@ -185,29 +180,54 @@
     &:focus,
     &:active {
       color: @black;
-
-      @media @desktop {
-        color: @white;
-      }
     }
 
     @media @tablet {
       border-bottom: 2px solid @green;
     }
+  }
 
+  &_index {
     @media @desktop {
-      border-bottom: 2px solid @white;
+      color: @white;
+    }
+
+    &:hover,
+    &:focus {
+      @media @desktop {
+        color: @white-60;
+      }
+    }
+
+    &:active {
+      @media @desktop {
+        color: @white-30;
+      }
+    }
+
+    &.main-nav__link_active {
+      &:hover,
+      &:focus,
+      &:active {
+        @media @desktop {
+          color: @white;
+        }
+      }
+
+      @media @desktop {
+        border-bottom: 2px solid @white;
+      }
     }
   }
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -1px;
+  right: calc((100vw - 320px) / 2 + 8px);
   padding: 0;
   width: 63px;
-  height: 65px;
+  height: 63px;
   cursor: pointer;
   border: none;
   background-color: @white;

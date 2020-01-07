@@ -1,34 +1,22 @@
+
 @import "../variables.less";
 @import "../mixins.less";
 
-.example {
-  position: relative;
-  padding: 15px 0 38px;
+.example__title-wrap {
+  padding: 17px 0 23px;
   background-color: @gray-light;
 
   @media @tablet {
-    .bordered-top();
-    padding: 50px 0 68px;
-    background: linear-gradient(transparent 54%, @gray-light 54%);
+    padding-top: 43px;
+    padding-bottom: 64px;
+    border-top: 1px solid @gray;
+    background: none;
   }
 
   @media @desktop {
-    padding: 60px 0 70px;
+    padding-top: 107px;
+    padding-bottom: 75px;
     border: 0 none;
-    background: linear-gradient(transparent 30%, @gray-light 30%);
-  }
-}
-
-.example__container {
-  @media @desktop {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.example__column {
-  @media @desktop {
-    width: 570px;
   }
 }
 
@@ -37,69 +25,123 @@
   margin: 0;
 }
 
-.example__content {
+.example__content-wrap {
+  padding-bottom: 30px;
+  background-color: @gray-light;
+
   @media @tablet {
-    margin-top: 60px;
+    padding-bottom: 68px;
+    background: linear-gradient(to bottom, @white 49.5%, @gray-light 49.5%);
+  }
+
+  @media @desktop {
+    padding-bottom: 0;
+    background: linear-gradient(to right, @gray-light 60%, @gray 60%);
+  }
+}
+
+.example__container {
+  @media @desktop {
+    display: flex;
+  }
+}
+
+.example__column {
+  @media @desktop {
+    flex-grow: 1;
+    padding-bottom: 68px;
+  }
+}
+
+.example__slider {
+  @media @desktop {
+    flex-grow: 1;
+    background: linear-gradient(to right, @gray-light 56%, @gray 56%);
+  }
+}
+
+.example__content {
+  margin: 0;
+  padding-right: 1px;
+
+  @media @tablet {
+    padding-right: 10px;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media @desktop {
-    margin-top: 140px;
-    /*padding-right: 226px;*/
+    margin-top: 71px;
+    padding-right: 0;
     width: 76%;
   }
 }
 
 .example__wrapper {
   @media @tablet {
+    margin-top: 53px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 55px;
   }
 
   @media @desktop {
     display: block;
-    margin-top: 0;
   }
 }
 
 .example__list {
   .list-style();
-  margin-top: 27px;
+  margin-top: 25px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @media @tablet {
+    justify-content: flex-start;
     margin-top: 0;
-    width: 50%;
+    /*width: 50%;*/
   }
 
   @media @desktop {
-    margin-top: 70px;
-    width: 65%;
+    justify-content: flex-start;
+    margin-top: 67px;
+    max-width: 68%;
   }
 }
 
 .example__item {
-  width: 50%;
+  max-width: 124px;
+
+  @media @tablet {
+    max-width: 162px;
+  }
 
   &:nth-child(2n-1) {
     margin-right: 32px;
+
+    @media @tablet {
+      margin-right: 42px;
+    }
+
+    @media @desktop {
+      margin-right: 44px;
+    }
   }
 }
 
 .example__value {
   .content-title();
   .uppercase();
-  padding: 15px 0;
+  padding: 13px 0 18px;
   display: block;
   text-align: center;
   border: 1px solid @gray-dark;
   border-radius: 3px;
 
   @media @tablet {
+    margin-right: -3px;
+    padding: 15px 0 18px;
     font-size: 30px;
     line-height: 37px;
   }
@@ -119,7 +161,7 @@
 
   &_weight {
     @media @tablet {
-      margin: 0 24px;
+      margin: 0 25px;
     }
   }
 
@@ -130,7 +172,7 @@
   }
 
   @media @tablet {
-    margin-top: -7px;
+    margin-top: -9px;
     padding: 0 7px;
     font-size: 14px;
     line-height: 14px;
@@ -145,25 +187,32 @@
 
 .example__tagline {
   .content-tagline();
-  margin-top: 22px;
+  margin-top: 20px;
+  margin-bottom: 0;
   font-size: 14px;
   text-align: center;
 
+  @media @tablet {
+    margin-top: -5px;
+    margin-right: 1px;
+  }
+
   @media @desktop {
-    margin-top: 50px;
+    margin-top: 46px;
     text-align: left;
   }
 }
 
 .example__text {
   @media @tablet {
-    /*margin-top: 50px;*/
+    margin-top: -2px;
     display: block;
     text-align: right;
   }
 
   @media @desktop {
-    margin-right: 64px;
+    margin-right: 59px;
+    margin-left: 1px;
     display: inline-block;
     text-align: left;
   }
@@ -172,7 +221,7 @@
 .example__price {
   @media @tablet {
     display: block;
-    margin-top: 10px;
+    margin-top: 9px;
     text-align: right;
   }
 

@@ -2,28 +2,38 @@
 @import "../variables.less";
 
 .intro {
-  padding-top: 12px;
-  padding-bottom: 47px;
+  padding-top: 17px;
+  padding-bottom: 42px;
 
   @media @tablet {
-    padding-top: 50px;
+    padding-top: 46px;
     padding-bottom: 0;
+  }
+
+  @media @desktop {
+    padding-top: 73px;
   }
 }
 
 .intro__title {
   .title();
   margin: 0;
+
+  @media @desktop {
+    padding-left: 1px;
+  }
 }
 
 .intro__list {
   .list-style();
-  margin-top: 30px;
+  margin-top: 28px;
+  counter-reset: list1;
 
   @media @tablet {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 60px;
+    margin-top: 72px;
+    margin-bottom: -31px;
   }
 }
 
@@ -34,14 +44,14 @@
   padding: 3px 0 3px 80px;
 
   @media @tablet {
-    padding: 113px 78px 135px 0;
+    padding: 113px 78px 132px 0;
     width: 324px;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media @desktop {
-    padding: 113px 0 50px;
+    padding: 112px 0 50px;
     width: 245px;
     font-size: 16px;
     line-height: 24px;
@@ -63,7 +73,7 @@
 
   &:not(:nth-child(4n)) {
     @media @desktop {
-      margin-right: 76px;
+      margin-right: 80px;
     }
   }
 
@@ -75,36 +85,42 @@
     width: 60px;
     height: 60px;
     background-repeat: no-repeat;
-    background-position: 5px 5px;
+    background-position: center center;
     background-color: @green;
 
     @media @tablet {
       width: 80px;
       height: 80px;
-      background-position: 15px 15px;
     }
   }
 
   &::after {
     @media @tablet {
       position: absolute;
-      top: 90px;
+      top: 88px;
       font-family: @main-font;
       font-size: 281px;
       color: @gray-light;
       z-index: -1;
+      counter-increment: list1;
+      content: counter(list1);
     }
   }
 
   &_structure {
     &::before {
       background-image: url("../img/advantage-leaf@1x.png");
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-leaf@2x.png");
+        background-size: 52px auto;
+      }
     }
 
     &::after {
       @media @tablet {
-        content: "1";
-        left: 126px;
+        /*content: "1";*/
+        left: 118px;
       }
     }
   }
@@ -112,12 +128,17 @@
   &_cooking {
     &::before {
       background-image: url("../img/advantage-powder@1x.png");
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-powder@2x.png");
+        background-size: 58px auto;
+      }
     }
 
     &::after {
       @media @tablet {
-        content: "2";
-        left: 122px;
+        /*content: "2";*/
+        left: 111px;
       }
     }
   }
@@ -125,12 +146,17 @@
   &_replace {
     &::before {
       background-image: url("../img/advantage-dining@1x.png");
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-dining@2x.png");
+        background-size: 46px auto;
+      }
     }
 
     &::after {
       @media @tablet {
-        content: "3";
-        left: 124px;
+        /*content: "3";*/
+        left: 113px;
       }
     }
   }
@@ -138,12 +164,17 @@
   &_result {
     &::before {
       background-image: url("../img/advantage-clock@1x.png");
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-clock@2x.png");
+        background-size: 52px auto;
+      }
     }
 
     &::after {
       @media @tablet {
-        content: "4";
-        left: 125px;
+        /*content: "4";*/
+        left: 113px;
       }
     }
   }
