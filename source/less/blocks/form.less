@@ -195,16 +195,16 @@
 .form__title-wrap {
   margin: 0 0 4px;
   position: relative;
-  padding-left: calc((100vw - @mobile-width) / 2 - 6px);
+  padding-left: calc((100vw - @{mobile-width}) / 2 - 6px);
 
   @media @tablet {
     margin: 0;
-    padding-left: calc((100vw - @tablet-width) / 2 + 30px);
+    padding-left: calc((100vw - @{tablet-width}) / 2 + 30px);
   }
 
   @media @desktop {
     margin: 0;
-    padding-left: calc((100vw - @desktop-width) / 2);
+    padding-left: calc((100vw - @{desktop-width}) / 2);
   }
 
   &::before {

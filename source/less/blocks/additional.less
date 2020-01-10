@@ -31,18 +31,18 @@
 .additional__title-wrap {
   position: relative;
   margin-bottom: 0;
-  padding-left: calc((100vw - @mobile-width) / 2);
+  padding-left: calc((100vw - @{mobile-width}) / 2);
 
   @media @tablet {
     margin-top: 68px;
     margin-left: 0;
-    padding-left: calc((100vw - @tablet-width) / 2 + 28px);
+    padding-left: calc((100vw - @{tablet-width}) / 2 + 28px);
     border: none;
   }
 
   @media @desktop {
     margin-top: 76px;
-    padding-left: calc((100vw - @desktop-width) / 2);
+    padding-left: calc((100vw - @{desktop-width}) / 2);
   }
 
   &::before {

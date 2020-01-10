@@ -32,8 +32,8 @@
   }
 }
 
-.social__link {
-  &_vkontakte {
+.social__icon {
+  &_vk {
     width: 22px;
     height: 12px;
 
@@ -43,7 +43,7 @@
     }
   }
 
-  &_instagram {
+  &_ig {
     width: 17px;
     height: 17px;
 
@@ -53,7 +53,7 @@
     }
   }
 
-  &_facebook {
+  &_fb {
     width: 10px;
     height: 19px;
 
@@ -63,16 +63,12 @@
     }
   }
 
-  svg {
-    fill: @gray-darken;
-  }
+  fill: @gray-darken;
 
   &:hover,
   &:focus,
   &:active {
-    svg {
-      fill: @green;
-    }
+    fill: @green;
   }
 
   &:active {
