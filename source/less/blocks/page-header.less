@@ -5,17 +5,17 @@
   position: relative;
   border-bottom: 1px solid @gray-lighten;
 
-  @media @tablet {
+  @media @tablet-width {
     border: 0 none;
   }
 
   &_index {
-    @media @desktop {
+    @media @desktop-width {
       background: linear-gradient(to right, @white 50%, @bg-green 50%);
     }
 
     &::before {
-      @media @desktop {
+      @media @desktop-width {
         position: absolute;
         content: "";
         top: 0;
@@ -36,7 +36,7 @@
 }
 
 .page-header__container {
-  @media @tablet {
+  @media @tablet-width {
     display: flex;
     justify-content: space-between;
   }
@@ -46,11 +46,11 @@
   display: block;
   padding: 13px 0 9px;
 
-  @media @tablet {
+  @media @tablet-width {
     padding: 23px 0 0;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding-top: 53px;
   }
 
@@ -70,12 +70,12 @@
   width: 191px;
   height: 39px;
 
-  @media @tablet {
+  @media @tablet-width {
     width: 174px;
     height: 59px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     width: 203px;
     height: 60px;
   }

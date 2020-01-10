@@ -21,7 +21,7 @@
     .main-nav__list {
       display: none;
 
-      @media @tablet {
+      @media @tablet-width {
         display: flex;
       }
     }
@@ -78,7 +78,7 @@
       width: 100%;
       z-index: 10;
 
-      @media @tablet {
+      @media @tablet-width {
         position: static;
       }
     }
@@ -93,13 +93,13 @@
       position: static;
       display: block;
 
-      @media @tablet {
+      @media @tablet-width {
         display: flex;
       }
     }
   }
 
-  @media @desktop {
+  @media @desktop-width {
     max-width: 50%;
   }
 }
@@ -107,13 +107,13 @@
 .main-nav__list {
   .list-style();
 
-  @media @tablet {
+  @media @tablet-width {
     padding-top: 42px;
     display: flex;
     flex-wrap: wrap;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding-top: 73px;
   }
 }
@@ -121,19 +121,19 @@
 .main-nav__item {
   background-color: @white;
 
-  @media @tablet {
+  @media @tablet-width {
     padding-left: 36px;
     background: none;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding-left: 34px;
   }
 
   &:last-child {
     border-bottom: 1px solid @gray-dark;
 
-    @media @tablet {
+    @media @tablet-width {
       border: 0 none;
     }
   }
@@ -149,7 +149,7 @@
   text-decoration: none;
   text-align: center;
 
-  @media @tablet {
+  @media @tablet-width {
     padding-top: 0;
     padding-bottom: 7px;
     font-size: 18px;
@@ -158,7 +158,7 @@
     border: 0 none;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding-bottom: 8px;
     font-size: 20px;
   }
@@ -179,25 +179,25 @@
       color: @black;
     }
 
-    @media @tablet {
+    @media @tablet-width {
       border-bottom: 2px solid @green;
     }
   }
 
   &_index {
-    @media @desktop {
+    @media @desktop-width {
       color: @white;
     }
 
     &:hover,
     &:focus {
-      @media @desktop {
+      @media @desktop-width {
         color: @white-60;
       }
     }
 
     &:active {
-      @media @desktop {
+      @media @desktop-width {
         color: @white-30;
       }
     }
@@ -206,12 +206,12 @@
       &:hover,
       &:focus,
       &:active {
-        @media @desktop {
+        @media @desktop-width {
           color: @white;
         }
       }
 
-      @media @desktop {
+      @media @desktop-width {
         border-bottom: 2px solid @white;
       }
     }
@@ -229,7 +229,7 @@
   border: none;
   background-color: @white;
 
-  @media @tablet {
+  @media @tablet-width {
     display: none;
   }
 }
