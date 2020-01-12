@@ -432,42 +432,31 @@
   }
 
   &_email {
-    /*background: url("../img/icon-mail.svg") no-repeat 184px 14px;
-    background-size: 18px 14px;*/
     padding-right: 40px;
 
     @media @tablet-width {
-      /*background-position: 512px 18px;*/
       padding: 10px 45px 10px 20px;
     }
 
     @media @desktop-width {
-      /*background-position: 448px 20px;*/
       padding-left: 18px;
     }
   }
 
   &_phone {
-    /*background: url("../img/icon-phone.svg") no-repeat 169px 12px;
-    background-size: 21px;*/
     padding-right: 40px;
 
     @media @tablet-width {
-      /*background-position: 497px 16px;*/
       padding: 9px 45px 11px 19px;
     }
 
     @media @desktop-width {
-      /*background-position: 431px 16px;*/
       padding: 10px 50px 10px 17px;
     }
   }
 
+  &:focus + .form__icon,
   &:active + .form__icon {
     fill: @green;
-  }
-
-  &:invalid + .form__icon {
-    fill: @error;
   }
 }
