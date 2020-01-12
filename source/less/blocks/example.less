@@ -6,14 +6,14 @@
   padding: 17px 0 23px;
   background-color: @gray-light;
 
-  @media @tablet {
+  @media @tablet-width {
     padding-top: 43px;
     padding-bottom: 64px;
     border-top: 1px solid @gray;
     background: none;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding-top: 107px;
     padding-bottom: 75px;
     border: 0 none;
@@ -29,32 +29,32 @@
   padding-bottom: 30px;
   background-color: @gray-light;
 
-  @media @tablet {
+  @media @tablet-width {
     padding-bottom: 68px;
     background: linear-gradient(to bottom, @white 49.5%, @gray-light 49.5%);
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding-bottom: 0;
     background: linear-gradient(to right, @gray-light 60%, @gray 60%);
   }
 }
 
 .example__container {
-  @media @desktop {
+  @media @desktop-width {
     display: flex;
   }
 }
 
 .example__column {
-  @media @desktop {
+  @media @desktop-width {
     flex-grow: 1;
     padding-bottom: 68px;
   }
 }
 
 .example__slider {
-  @media @desktop {
+  @media @desktop-width {
     flex-grow: 1;
     background: linear-gradient(to right, @gray-light 56%, @gray 56%);
   }
@@ -64,13 +64,13 @@
   margin: 0;
   padding-right: 1px;
 
-  @media @tablet {
+  @media @tablet-width {
     padding-right: 10px;
     font-size: 16px;
     line-height: 24px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     margin-top: 71px;
     padding-right: 0;
     width: 76%;
@@ -78,14 +78,14 @@
 }
 
 .example__wrapper {
-  @media @tablet {
+  @media @tablet-width {
     margin-top: 53px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     display: block;
   }
 }
@@ -97,13 +97,13 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  @media @tablet {
+  @media @tablet-width {
     justify-content: flex-start;
     margin-top: 0;
     /*width: 50%;*/
   }
 
-  @media @desktop {
+  @media @desktop-width {
     justify-content: flex-start;
     margin-top: 67px;
     max-width: 68%;
@@ -113,18 +113,18 @@
 .example__item {
   max-width: 124px;
 
-  @media @tablet {
+  @media @tablet-width {
     max-width: 162px;
   }
 
   &:nth-child(2n-1) {
     margin-right: 32px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-right: 42px;
     }
 
-    @media @desktop {
+    @media @desktop-width {
       margin-right: 44px;
     }
   }
@@ -139,7 +139,7 @@
   border: 1px solid @gray-dark;
   border-radius: 3px;
 
-  @media @tablet {
+  @media @tablet-width {
     margin-right: -3px;
     padding: 15px 0 18px;
     font-size: 30px;
@@ -160,18 +160,18 @@
   z-index: 2;
 
   &_weight {
-    @media @tablet {
+    @media @tablet-width {
       margin: 0 25px;
     }
   }
 
   &_time {
-    @media @tablet {
+    @media @tablet-width {
       margin: 0 10px;
     }
   }
 
-  @media @tablet {
+  @media @tablet-width {
     margin-top: -9px;
     padding: 0 7px;
     font-size: 14px;
@@ -179,7 +179,7 @@
     background-color: @white;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     margin-top: -8px;
     background-color: @gray-light;
   }
@@ -192,25 +192,25 @@
   font-size: 14px;
   text-align: center;
 
-  @media @tablet {
+  @media @tablet-width {
     margin-top: -5px;
     margin-right: 1px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     margin-top: 46px;
     text-align: left;
   }
 }
 
 .example__text {
-  @media @tablet {
+  @media @tablet-width {
     margin-top: -2px;
     display: block;
     text-align: right;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     margin-right: 59px;
     margin-left: 1px;
     display: inline-block;
@@ -219,13 +219,13 @@
 }
 
 .example__price {
-  @media @tablet {
+  @media @tablet-width {
     display: block;
     margin-top: 9px;
     text-align: right;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     display: inline-block;
     text-align: left;
   }

@@ -5,11 +5,11 @@
 .slider {
   margin-top: 35px;
 
-  @media @tablet {
+  @media @tablet-width {
     margin-top: 81px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     margin-top: 0;
     margin-right: -40px;
     padding-bottom: 68px;
@@ -25,19 +25,19 @@
     width: 318px;
     height: 238px;
 
-    @media @tablet {
+    @media @tablet-width {
       width: 676px;
       height: 518px;
     }
 
-    @media @desktop {
+    @media @desktop-width {
       width: 688px;
       height: 518px;
     }
   }
 
   &_after {
-    @media @tablet {
+    @media @tablet-width {
       position: absolute;
       right: 0;
     }
@@ -52,13 +52,13 @@
   display: flex;
   flex-wrap: nowrap;
 
-  @media @tablet {
+  @media @tablet-width {
     margin-top: 14px;
     padding-right: 69px;
     padding-left: 67px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     margin-top: 35px;
     margin-right: 0;
     padding-right: 39px;
@@ -74,19 +74,19 @@
   background: none;
   border: 1px solid transparent;
 
-  @media @tablet {
+  @media @tablet-width {
     border-bottom: 1px dotted @gray;
   }
 
   &:hover,
   &:focus {
-    @media @tablet {
+    @media @tablet-width {
       border-bottom: 1px solid @black-40;
     }
   }
 
   &:active {
-    @media @tablet {
+    @media @tablet-width {
       border-bottom: 1px solid transparent;
     }
   }
@@ -94,7 +94,7 @@
   &_before {
     margin-right: 12px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-right: 23px;
     }
   }
@@ -102,7 +102,7 @@
   &_after {
     margin-left: 13px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-left: 19px;
     }
   }
@@ -123,7 +123,7 @@
   background-color: @white;
   border-radius: 6px;
 
-  @media @tablet {
+  @media @tablet-width {
     top: 8px;
     height: 6px;
     border-radius: 2.5px;
@@ -142,7 +142,7 @@
   border-radius: 3px;
   cursor: pointer;
 
-  @media @tablet {
+  @media @tablet-width {
     top: -5px;
     left: 50%;
     width: 32px;
@@ -155,7 +155,7 @@
   }
 
   &::before {
-    @media @tablet {
+    @media @tablet-width {
       content: "";
       position: absolute;
       top: 11px;
@@ -169,20 +169,20 @@
 
   &:hover,
   &:focus {
-    @media @tablet {
+    @media @tablet-width {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
   }
 
   &:active {
     &::before {
-      @media @tablet {
+      @media @tablet-width {
         top: 10px;
         left: 10px;
       }
     }
 
-    @media @tablet {
+    @media @tablet-width {
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
       border: 2px solid @green;
     }
@@ -192,21 +192,21 @@
 .slider__picture {
   margin-left: -19px;
 
-  @media @tablet {
+  @media @tablet-width {
     margin-left: 0;
   }
 
   &_before {
     display: block;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-left: 18px;
       width: 47.5%;
       overflow: hidden;
       z-index: 2;
     }
 
-    @media @desktop {
+    @media @desktop-width {
       margin-top: -190px;
       margin-left: 0;
       width: 53%;
@@ -216,7 +216,7 @@
   &_after {
     display: none;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-right: 8px;
       display: block;
       position: absolute;
@@ -227,7 +227,7 @@
       overflow: hidden;
     }
 
-    @media @desktop {
+    @media @desktop-width {
       margin-right: 0;
       width: 47%;
     }

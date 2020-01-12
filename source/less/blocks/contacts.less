@@ -8,13 +8,13 @@
     background-color: @white;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding: 0;
   }
 }
 
 .contacts__container {
-  @media @desktop {
+  @media @desktop-width {
     position: relative;
   }
 }
@@ -24,11 +24,11 @@
   display: flex;
   justify-content: space-between;
 
-  @media @tablet {
+  @media @tablet-width {
     padding: 65px 46px 60px 41px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     position: absolute;
     top: 95px;
     left: 40px;
@@ -44,13 +44,13 @@
   margin-top: 14px;
   margin-right: 18px;
 
-  @media @tablet {
+  @media @tablet-width {
     margin: 0 310px 0 0;
     font-size: 20px;
     line-height: 25px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     margin: 0 96px 0 0;
   }
 }
@@ -59,7 +59,7 @@
   .content();
   line-height: 20px;
 
-  @media @tablet {
+  @media @tablet-width {
     margin: 0;
     margin-top: -2px;
     margin-right: -4px;
@@ -67,13 +67,13 @@
     text-align: right;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     text-align: left;
   }
 }
 
 .contacts__address-city {
-  @media @tablet {
+  @media @tablet-width {
     margin-top: 20px;
     display: inline-block;
   }
@@ -84,14 +84,14 @@
   width: 100%;
   height: 370px;
 
-  @media @tablet {
+  @media @tablet-width {
     height: 400px;
   }
 }
 
 .contacts__map-image {
   margin: 0 auto;
-  width: @mobile-width;
+  width: @mobile;
   height: 100%;
   background: url("../img/bg-map-mobile@1x.png") no-repeat 0 0;
 
@@ -100,8 +100,8 @@
     background-size: 100% auto;
   }
 
-  @media @tablet {
-    min-width: @tablet-width;
+  @media @tablet-width {
+    min-width: @tablet;
     background-image: url("../img/bg-map-tablet@1x.png");
 
     @media (min-resolution: @retina-dppx) {
@@ -110,8 +110,8 @@
     }
   }
 
-  @media @desktop {
-    width: @desktop-width;
+  @media @desktop-width {
+    width: @desktop;
     background-image: url("../img/bg-map-desktop@1x.png");
 
     @media (min-resolution: @retina-dppx) {

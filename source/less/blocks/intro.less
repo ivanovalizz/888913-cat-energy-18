@@ -5,12 +5,12 @@
   padding-top: 17px;
   padding-bottom: 42px;
 
-  @media @tablet {
+  @media @tablet-width {
     padding-top: 46px;
     padding-bottom: 0;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding-top: 73px;
   }
 }
@@ -19,7 +19,7 @@
   .title();
   margin: 0;
 
-  @media @desktop {
+  @media @desktop-width {
     padding-left: 1px;
   }
 }
@@ -29,7 +29,7 @@
   margin-top: 28px;
   counter-reset: list1;
 
-  @media @tablet {
+  @media @tablet-width {
     display: flex;
     flex-wrap: wrap;
     margin-top: 72px;
@@ -43,14 +43,14 @@
   margin: 0;
   padding: 3px 0 3px 80px;
 
-  @media @tablet {
+  @media @tablet-width {
     padding: 113px 78px 132px 0;
     width: 324px;
     font-size: 16px;
     line-height: 24px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding: 112px 0 50px;
     width: 245px;
     font-size: 16px;
@@ -60,19 +60,19 @@
   &:not(:first-child) {
     margin-top: 20px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-top: 0;
     }
   }
 
   &:nth-child(2n-1) {
-    @media @tablet {
+    @media @tablet-width {
       margin-right: 60px;
     }
   }
 
   &:not(:nth-child(4n)) {
-    @media @desktop {
+    @media @desktop-width {
       margin-right: 80px;
     }
   }
@@ -88,14 +88,14 @@
     background-position: center center;
     background-color: @green;
 
-    @media @tablet {
+    @media @tablet-width {
       width: 80px;
       height: 80px;
     }
   }
 
   &::after {
-    @media @tablet {
+    @media @tablet-width {
       position: absolute;
       top: 88px;
       font-family: @main-font;
@@ -118,8 +118,7 @@
     }
 
     &::after {
-      @media @tablet {
-        /*content: "1";*/
+      @media @tablet-width {
         left: 118px;
       }
     }
@@ -136,8 +135,7 @@
     }
 
     &::after {
-      @media @tablet {
-        /*content: "2";*/
+      @media @tablet-width {
         left: 111px;
       }
     }
@@ -154,8 +152,7 @@
     }
 
     &::after {
-      @media @tablet {
-        /*content: "3";*/
+      @media @tablet-width {
         left: 113px;
       }
     }
@@ -172,8 +169,7 @@
     }
 
     &::after {
-      @media @tablet {
-        /*content: "4";*/
+      @media @tablet-width {
         left: 113px;
       }
     }

@@ -4,22 +4,22 @@
 .form {
   padding-bottom: 31px;
 
-  @media @tablet {
+  @media @tablet-width {
     padding-bottom: 72px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding-bottom: 82px;
   }
 }
 
 .form__container {
-  @media @tablet {
+  @media @tablet-width {
     padding-right: 67px;
     padding-left: 71px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding: 0 40px;
   }
 }
@@ -29,11 +29,11 @@
   margin: 0;
   margin-top: 15px;
 
-  @media @tablet {
+  @media @tablet-width {
     margin-top: 53px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     margin-top: 71px;
   }
 }
@@ -49,7 +49,7 @@
   font-family: @main-font;
   color: @black;
 
-  @media @tablet {
+  @media @tablet-width {
     margin-top: 55px;
     padding-right: 340px;
     padding-left: 41px;
@@ -57,7 +57,7 @@
     line-height: 30px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding: 0;
     max-width: 330px;
   }
@@ -72,11 +72,11 @@
   &_main-info {
     margin-top: 38px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-top: 67px;
     }
 
-    @media @desktop {
+    @media @desktop-width {
       margin: 0;
       padding: 0;
       width: 570px;
@@ -84,7 +84,7 @@
 
     .form__item {
       &:not(:first-child) {
-        @media @tablet {
+        @media @tablet-width {
           margin-top: 20px;
         }
       }
@@ -96,12 +96,12 @@
     margin: 23px -20px 0;
     padding: 26px 20px 28px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin: 72px 0 0;
       padding: 34px 42px;
     }
 
-    @media @desktop {
+    @media @desktop-width {
       margin: 0;
       padding: 34px 41px;
       width: 570px;
@@ -111,26 +111,26 @@
   &_contacts {
     margin-top: 28px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-top: 76px;
     }
 
-    @media @desktop {
+    @media @desktop-width {
       margin-top: 70px;
     }
 
     .form__item {
-      @media @desktop {
+      @media @desktop-width {
         margin: 0;
         width: 570px;
       }
 
       &:not(:first-child) {
-        @media @tablet {
+        @media @tablet-width {
           margin-top: 20px;
         }
 
-        @media @desktop {
+        @media @desktop-width {
           margin-top: 0;
         }
       }
@@ -140,11 +140,11 @@
   &_comments {
     margin-top: 27px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-top: 66px;
     }
 
-    @media @desktop {
+    @media @desktop-width {
       margin-top: 68px;
     }
   }
@@ -152,18 +152,18 @@
   &_additional {
     margin-top: 25px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-top: 61px;
     }
 
-    @media @desktop {
+    @media @desktop-width {
       margin-top: 63px;
     }
   }
 }
 
 .form__main-content {
-  @media @desktop {
+  @media @desktop-width {
     display: flex;
     justify-content: space-between;
     margin-top: 65px;
@@ -173,7 +173,7 @@
 .form__wrapper-checkbox {
   margin-top: 10px;
 
-  @media @tablet {
+  @media @tablet-width {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -182,11 +182,11 @@
 }
 
 .form__wrapper-contacts {
-  @media @tablet {
+  @media @tablet-width {
     padding: 75px 0 0;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     display: flex;
     justify-content: space-between;
   }
@@ -195,16 +195,16 @@
 .form__title-wrap {
   margin: 0 0 4px;
   position: relative;
-  padding-left: calc((100vw - @{mobile-width}) / 2 - 6px);
+  padding-left: calc((100vw - @mobile) / 2 - 6px);
 
-  @media @tablet {
+  @media @tablet-width {
     margin: 0;
-    padding-left: calc((100vw - @{tablet-width}) / 2 + 30px);
+    padding-left: calc((100vw - @tablet) / 2 + 30px);
   }
 
-  @media @desktop {
+  @media @desktop-width {
     margin: 0;
-    padding-left: calc((100vw - @{desktop-width}) / 2);
+    padding-left: calc((100vw - @desktop) / 2);
   }
 
   &::before {
@@ -217,11 +217,11 @@
     background-color: @green;
     z-index: -1;
 
-    @media @tablet {
+    @media @tablet-width {
       top: 21px;
     }
 
-    @media @desktop {
+    @media @desktop-width {
       top: 22px;
     }
   }
@@ -233,29 +233,30 @@
   display: inline-block;
   background-color: @white;
 
-  @media @tablet {
+  @media @tablet-width {
     padding: 0 43px 0 39px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     padding-right: 42px;
   }
 
   &_contacts {
     max-width: 228px;
 
-    @media @tablet {
+    @media @tablet-width {
       max-width: 700px;
     }
   }
 }
 
 .form__item {
+  position: relative;
   margin: 13px 0 0;
   display: flex;
   align-items: center;
 
-  @media @desktop {
+  @media @desktop-width {
     margin-top: 20px;
   }
 
@@ -264,7 +265,7 @@
   }
 
   &_number {
-    @media @tablet {
+    @media @tablet-width {
       margin-left: -3px;
     }
   }
@@ -275,14 +276,14 @@
   margin-right: 14px;
   white-space: nowrap;
 
-  @media @tablet {
+  @media @tablet-width {
     margin-right: 17px;
   }
 
   &_weight {
     margin-right: 17px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-right: 20px;
     }
   }
@@ -290,7 +291,7 @@
   &_age {
     margin-right: 14px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-right: 17px;
     }
   }
@@ -298,19 +299,19 @@
   &_email {
     margin-right: 12px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-right: 19px;
     }
 
-    @media @tablet {
+    @media @desktop-width {
       margin-right: 22px;
     }
   }
 
-  &_number {
+  &_phone {
     margin-right: 10px;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-right: 16px;
     }
   }
@@ -325,7 +326,7 @@
     color: @black-lighten;
     border: 1px solid @gray-dark-50;
 
-    @media @tablet {
+    @media @tablet-width {
       margin-top: 76px;
       padding: 14px 10px 15px 18px;
       min-height: 174px;
@@ -334,14 +335,14 @@
 }
 
 .form__manage {
-  @media @tablet {
+  @media @tablet-width {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 65px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     margin-top: 72px;
     padding: 0;
   }
@@ -354,7 +355,7 @@
   color: @black-lighten;
   text-align: center;
 
-  @media @tablet {
+  @media @tablet-width {
     margin-top: -4px;
     width: 286px;
     font-size: 16px;
@@ -362,7 +363,7 @@
     text-align: left;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     width: 570px;
   }
 }
@@ -373,51 +374,89 @@
   width: 100%;
   border: 0 none;
 
-  @media @tablet {
+  @media @tablet-width {
     margin-top: 0;
     padding: 15px 20px 17px;
     width: 283px;
   }
 
-  @media @desktop {
+  @media @desktop-width {
     width: 570px;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  fill: @black-light;
+
+  &_email {
+    top: 14px;
+    right: 15px;
+    width: 18px;
+    height: 14px;
+
+    @media @tablet-width {
+      top: 18px;
+      right: 20px;
+    }
+
+    @media @desktop-width {
+      top: 20px;
+      right: 19px;
+    }
+  }
+
+  &_phone {
+    top: 12px;
+    right: 13px;
+    width: 21px;
+    height: 21px;
+
+    @media @tablet-width {
+      top: 16px;
+      right: 17px;
+    }
+
+    @media @desktop-width {
+      top: 16px;
+      right: 19px;
+    }
   }
 }
 
 .form__input {
   &_weight {
-    @media @tablet {
+    @media @tablet-width {
       padding: 10px 18px;
     }
   }
 
   &_email {
-    background: url("../img/icon-mail.svg") no-repeat 184px 14px;
-    background-size: 18px 14px;
+    padding-right: 40px;
 
-    @media @tablet {
-      background-position: 512px 18px;
-      padding: 10px 20px;
+    @media @tablet-width {
+      padding: 10px 45px 10px 20px;
     }
 
-    @media @desktop {
-      background-position: 448px 20px;
-      padding: 10px 18px;
+    @media @desktop-width {
+      padding-left: 18px;
     }
   }
 
-  &_number {
-    background: url("../img/icon-phone.svg") no-repeat 169px 12px;
-    background-size: 21px;
+  &_phone {
+    padding-right: 40px;
 
-    @media @tablet {
-      background-position: 497px 16px;
-      padding: 9px 19px 11px;
+    @media @tablet-width {
+      padding: 9px 45px 11px 19px;
     }
 
-    @media @desktop {
-      background-position: 431px 16px;
-      padding: 10px 17px;
+    @media @desktop-width {
+      padding: 10px 50px 10px 17px;
     }
+  }
+
+  &:focus + .form__icon,
+  &:active + .form__icon {
+    fill: @green;
   }
 }
