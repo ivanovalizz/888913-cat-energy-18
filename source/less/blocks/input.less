@@ -19,11 +19,11 @@
 
   &:active {
     border: 1px solid @black-lighten;
+    outline: 1px solid @black-lighten;
   }
 
-  &.submitted { /*TODO: С помощью js при отправке формы полям добавляется класс .submitted */
-    &:invalid {
-      border: 1px solid @error;
-    }
+  &:invalid {
+    border: 1px solid @error;
+    outline: 1px solid @error;
   }
 }

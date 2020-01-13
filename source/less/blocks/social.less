@@ -64,14 +64,16 @@
   }
 
   fill: @gray-darken;
+}
 
-  &:hover,
-  &:focus,
-  &:active {
+.social__link:hover,
+.social__link:focus,
+.social__link:active {
+  .social__icon {
     fill: @green;
   }
+}
 
-  &:active {
-    opacity: 0.3;
-  }
+.social__link:active {
+  opacity: 0.3;
 }
