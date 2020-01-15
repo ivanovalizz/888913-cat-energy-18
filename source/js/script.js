@@ -47,22 +47,18 @@ window.onload = function() {
   function tabletSlider() {
     pictureAfter.classList.remove('slider__picture-hidden');
 
-    if (viewportWidth >= DESKTOP_WIDTH) {
-      buttonBefore.addEventListener('click', function() {
-        pictureAfter.classList.add('slider__picture-hidden');
-        pictureBefore.style.width = '100%';
-        exampleSlider.style.background = 'linear-gradient(to right, @gray-light 100%, @gray 100%)';
-        example.style.background = 'linear-gradient(to right, @gray-light 100%, @gray 100%)';
-      });
-      buttonAfter.addEventListener('click', function() {
-        pictureBefore.classList.add('slider__picture-hidden');
-        pictureAfter.classList.remove('slider__picture-hidden');
-        imageAfter.classList.add('slider__picture-display');
-        pictureAfter.style.width = '100%';
-        pictureAfter.style.position = 'static';
-        exampleSlider.style.background = 'linear-gradient(to right, @gray-light 0%, @gray 0%)';
-      });
-    }
+    buttonBefore.addEventListener('click', function() {
+      pictureAfter.style.width = '0%';
+      pictureBefore.style.width = '100%';
+      toggle.classList.remove('slider__toggle-after');
+      toggle.classList.add('slider__toggle-before');
+    });
+    buttonAfter.addEventListener('click', function() {
+      pictureBefore.style.width = '0%';
+      pictureAfter.style.width = '100%';
+      toggle.classList.remove('slider__toggle-before');
+      toggle.classList.add('slider__toggle-after');
+    });
   }
 
   if (viewportWidth >= TABLET_WIDTH) {
