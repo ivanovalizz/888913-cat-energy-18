@@ -44,10 +44,13 @@
   }
 
   &_insta {
+    margin-top: 3px;
+    margin-right: 2px;
     width: 17px;
     height: 17px;
 
     @media @tablet-width {
+      margin: 0;
       width: 23px;
       height: 23px;
     }
@@ -64,14 +67,16 @@
   }
 
   fill: @gray-darken;
+}
 
-  &:hover,
-  &:focus,
-  &:active {
+.social__link:hover,
+.social__link:focus,
+.social__link:active {
+  .social__icon {
     fill: @green;
   }
+}
 
-  &:active {
-    opacity: 0.3;
-  }
+.social__link:active {
+  opacity: 0.3;
 }
