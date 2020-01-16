@@ -3,6 +3,7 @@
 
 .additional {
   position: relative;
+  padding-bottom: 35px;
 
   @media @tablet-width {
     padding-bottom: 74px;
@@ -14,7 +15,7 @@
 }
 
 .additional__container {
-  padding: 0;
+  /*padding: 0 20px;*/
 
   @media @tablet-width {
     padding: 0 30px;
@@ -90,7 +91,7 @@
 .additional__item {
   .bordered-top();
   padding: 11px 0 17px;
-  margin: 0 20px;
+  /*margin: 0 20px;*/
 
   @media @tablet-width {
     margin: 0;
@@ -115,10 +116,6 @@
 
   &:last-child {
     border-bottom: 1px solid @gray;
-
-    @media @tablet-width {
-      border-bottom: 0 none;
-    }
 
     @media @desktop-width {
       border-bottom: 1px solid @gray;
@@ -204,5 +201,36 @@
   @media @desktop-width {
     margin: 0;
     width: 245px;
+  }
+}
+
+.additional__tagline {
+  margin-top: 39px;
+  margin-bottom: 0;
+  padding: 187px 55px 42px;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  text-align: center;
+  background: url("../img/icon-gift.svg") no-repeat center 40px, url("../img/gift-photo-mobile@1x.jpg") no-repeat 0 0 @green;
+  background-size: 56px 109px, cover;
+
+  @media @tablet-width {
+    margin-top: 70px;
+    margin-bottom: 0;
+    padding: 72px 120px 69px 424px;
+    text-align: left;
+    background: url("../img/icon-gift.svg") no-repeat 90px 64px, url("../img/gift-photo-tablet@1x.jpg") no-repeat 0 0 @green;
+    background-size: 56px 61px, cover;
+    border: none;
+  }
+
+  @media @desktop-width {
+    padding: 186px 40px 43px;
+    margin-top: 80px;
+    width: 245px;
+    text-align: center;
+    background: url("../img/icon-gift.svg") no-repeat 95px 65px, url("../img/gift-photo-desktop@1x.jpg") no-repeat 0 0 @green;
+    background-size: 56px 61px, cover;
   }
 }

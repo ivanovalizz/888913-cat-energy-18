@@ -37,6 +37,7 @@
   @media @desktop-width {
     padding-bottom: 0;
     background: linear-gradient(to right, @gray-light 60%, @gray 60%);
+    transition: background 5s linear 15s;
   }
 }
 
@@ -49,7 +50,7 @@
 .example__column {
   @media @desktop-width {
     flex-grow: 1;
-    padding-bottom: 68px;
+    padding-bottom: 75px;
   }
 }
 
@@ -57,6 +58,7 @@
   @media @desktop-width {
     flex-grow: 1;
     background: linear-gradient(to right, @gray-light 56%, @gray 56%);
+    transition: background 5s linear 0s;
   }
 }
 
@@ -118,7 +120,7 @@
   }
 
   &:nth-child(2n-1) {
-    margin-right: 32px;
+    margin-right: 30px;
 
     @media @tablet-width {
       margin-right: 42px;

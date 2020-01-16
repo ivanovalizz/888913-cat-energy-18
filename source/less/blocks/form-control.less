@@ -56,11 +56,18 @@
         margin-top: 0;
       }
     }
+
+    &:nth-child(n+5) {
+      @media @desktop-width {
+        margin-top: 52px;
+      }
+    }
   }
 }
 
 .form-control__label {
   position: relative;
+  white-space: normal;
 
   &_radio {
     padding-left: 45px;
@@ -144,5 +151,22 @@
     left: -3px;
     width: 16px;
     height: 16px;
+  }
+}
+
+.form-control__checkbox:disabled + .form-control__label_checkbox,
+.form-control__radio:disabled + .form-control__label_radio {
+  opacity: 0.5;
+}
+
+.form-control__radio {
+  &:focus + .form-control__label_radio::before {
+    box-shadow: 0 0 2px 3px rgba(0, 103, 244, 0.5);
+  }
+}
+
+.form-control__checkbox {
+  &:focus + .form-control__label_checkbox::before {
+    box-shadow: 0 0 2px 3px rgba(0, 103, 244, 0.5);
   }
 }

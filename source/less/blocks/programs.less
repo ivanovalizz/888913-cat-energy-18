@@ -236,12 +236,21 @@
   &:hover,
   &:focus {
     &::before {
-      right: 11px;
+      right: 12px;
       width: 27px;
+
+      @media @tablet-width {
+        right: -4px;
+        width: 30px;
+      }
     }
 
     &::after {
-      right: 6px;
+      right: 8px;
+
+      @media @tablet-width {
+        right: -8px;
+      }
     }
   }
 
