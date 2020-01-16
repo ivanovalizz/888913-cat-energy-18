@@ -27,32 +27,16 @@ window.onload = function() {
       pictureBefore.style.display = "block";
       pictureAfter.style.display = "none";
       toggle.style.left = "8%";
-      /*if (pictureBefore.classList.contains("slider__picture_hidden")) {
-        /!*pictureBefore.classList.remove("slider__picture_hidden");
-        pictureAfter.classList.add("slider__picture_hidden");*!/
-        pictureBefore.style.display = "block";
-        pictureAfter.style.display = "none";
-        toggle.style.left = "8%";
-      }*/
     });
 
     buttonAfter.addEventListener("click", function() {
       pictureBefore.style.display = "none";
       pictureAfter.style.display = "block";
       toggle.style.left = "48%";
-      /*if (pictureAfter.classList.contains("slider__picture_hidden")) {
-        /!*pictureAfter.classList.remove("slider__picture_hidden");
-        pictureBefore.classList.add("slider__picture_hidden");*!/
-        pictureBefore.style.display = "none";
-        pictureAfter.style.display = "block";
-        toggle.style.left = "48%";
-      }*/
     });
   }
 
   function tabletSlider() {
-    pictureAfter.classList.remove("slider__picture_hidden");
-
     buttonBefore.addEventListener("click", function() {
       pictureAfter.style.width = "0%";
       pictureBefore.style.width = "100%";
