@@ -17,7 +17,7 @@ var include = require("posthtml-include");
 var jsuglify = require("gulp-uglify");
 var server = require("browser-sync").create();
 
-gulp.task("css", function () {
+gulp.task("css", function() {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -72,12 +72,12 @@ gulp.task("js", function() {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("refresh", function (done) {
+gulp.task("refresh", function(done) {
   server.reload();
   done();
 });
 
-gulp.task("server", function () {
+gulp.task("server", function() {
   server.init({
     server: "build/",
     notify: false,
@@ -92,7 +92,7 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task("copy", function () {
+gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
